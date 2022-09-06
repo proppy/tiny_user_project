@@ -137,6 +137,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: restore setup
+      uses: actions/cache@v3
+      with:
+        path: |
+          ${{ env.PDK_ROOT }}
+        key: ${{ runner.os }}-setup-${{ env.SETUP_TAG }}
+
     - name: setup
       run: |
         make precheck
@@ -144,16 +151,23 @@ jobs:
     - name: restore gds cache
       uses: actions/cache@v3
       with:
-        path: gds
+        path: |
+          def/
+          gds/
+          lef/
+          mag/
+          maglef/
+          sdc/
+          sdf/
+          signoff/
+          spef/
+          spi/
+          verilog/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
     - name: check
       run: |
-        cat << EOF >> $GITHUB_STEP_SUMMARY
-        \`\`\`
-        `make run-precheck`
-        \`\`\`        
-        EOF
+        make run-precheck
 
   commit:
     needs:
@@ -199,7 +213,18 @@ jobs:
     - name: restore gds cache
       uses: actions/cache@v3
       with:
-        path: gds
+        path: |
+          def/
+          gds/
+          lef/
+          mag/
+          maglef/
+          sdc/
+          sdf/
+          signoff/
+          spef/
+          spi/
+          verilog/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
     - name: create user_project_wrapper svg
       run: |
@@ -231,11 +256,23 @@ jobs:
     - name: restore gds cache
       uses: actions/cache@v3
       with:
-        path: gds
+        path: |
+          def/
+          gds/
+          lef/
+          mag/
+          maglef/
+          sdc/
+          sdf/
+          signoff/
+          spef/
+          spi/
+          verilog/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
     - name: GDS2WebGL
       run: |
-        python3 gds2webgl.py -i gds/user_project_wrapper.gds -o index.html
+        python -m pip install gdspy pyclipper mapbox_earcut
+        python gds2webgl.py -i gds/user_project_wrapper.gds -o index.html
     - name: populate webgl cache
       uses: actions/cache@v3
       with:
