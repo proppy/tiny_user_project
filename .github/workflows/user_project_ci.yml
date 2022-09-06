@@ -1,4 +1,4 @@
-name: CI
+name: user_project_ci
 
 on:
   push:
@@ -296,12 +296,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: restore svg cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: 'user_project_wrapper.svg'
         key: ${{ runner.os }}-svg-${{ github.run_id }}
     - name: restore webgl cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: 'index.html'
         key: ${{ runner.os }}-webgl-${{ github.run_id }}
