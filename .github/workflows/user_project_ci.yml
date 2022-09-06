@@ -94,7 +94,7 @@ jobs:
 
         print('# user_project_wrapper')
         print('## metrics')
-        metrics = pathlib.Path('openlane/user_project_wrapper/runs/user_project_wrapper/metrics.csv')
+        metrics = pathlib.Path('openlane/user_project_wrapper/runs/user_project_wrapper/reports/metrics.csv')
         with metrics.open() as f:
             d = list(csv.DictReader(f))[0]
             print('key|value')
