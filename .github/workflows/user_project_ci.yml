@@ -23,9 +23,33 @@ jobs:
 
       - name: harden
         run: |
+          make fetch
           make user_module
           make user_project_wrapper
 
-      - name: precheck
+      - name: cache gds
+        uses: actions/cache@v3
+        with:
+          path: gds
+          key: ${{ runner.os }}-gds-${{ github.run_id }}
+
+  precheck:
+    needs:
+    - gds
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: setup
+        run: |
+          make precheck
+
+      - name: restore runs cache
+        uses: actions/cache@v3
+        with:
+          path: gds
+          key: ${{ runner.os }}-gds-${{ github.run_id }}
+          
+      - name: check
         run: |
           make run-precheck
