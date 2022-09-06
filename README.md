@@ -4,7 +4,7 @@ Template for submitting [TinyTapeout](https://tinytapeout.com) based projects to
 
 ## Usage
 
-1. [Generate](https://github.com/proppy/tiny_caravel_project_example/generate) a new project based on this template
+1. [Generate](https://github.com/proppy/tiny_user_project/generate) a new project based on this template
 
 2. Create a new [Wokwi](https://wokwi.com/) project and update [WOKWI_PROJECT_ID](Makefile#L227).
 
