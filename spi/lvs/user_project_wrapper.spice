@@ -1,9 +1,9 @@
 * NGSPICE file created from user_project_wrapper.ext - technology: sky130A
 
-* Black-box entry subcircuit for user_module_334445762078310996 abstract view
-.subckt user_module_334445762078310996 io_in[0] io_in[1] io_in[2] io_in[3] io_in[4]
-+ io_in[5] io_in[6] io_in[7] io_out[0] io_out[1] io_out[2] io_out[3] io_out[4] io_out[5]
-+ io_out[6] io_out[7] vccd1 vssd1
+* Black-box entry subcircuit for user_module abstract view
+.subckt user_module io_in[0] io_in[1] io_in[2] io_in[3] io_in[4] io_in[5] io_in[6]
++ io_in[7] io_out[0] io_out[1] io_out[2] io_out[3] io_out[4] io_out[5] io_out[6] io_out[7]
++ vccd1 vssd1
 .ends
 
 .subckt user_project_wrapper analog_io[0] analog_io[10] analog_io[11] analog_io[12]
@@ -109,6 +109,6 @@
 + wbs_sel_i[1] wbs_sel_i[2] wbs_sel_i[3] wbs_stb_i wbs_we_i
 Xmprj io_in[12] io_in[13] io_in[14] io_in[15] io_in[16] io_in[17] io_in[18] io_in[19]
 + io_out[20] io_out[21] io_out[22] io_out[23] io_out[24] io_out[25] io_out[26] io_out[27]
-+ vccd1 vssd1 user_module_334445762078310996
++ vccd1 vssd1 user_module
 .ends
 

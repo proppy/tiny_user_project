@@ -1295,7 +1295,7 @@ wbs_we_i I
 *D_NET *33 0.20722
 *CONN
 *P io_in[12] I
-*I *646:io_in[0] I *D user_module_334445762078310996
+*I *646:io_in[0] I *D user_module
 *CAP
 1 io_in[12] 0.00106527
 2 *646:io_in[0] 0.000633312
@@ -1315,7 +1315,7 @@ wbs_we_i I
 *D_NET *34 0.239974
 *CONN
 *P io_in[13] I
-*I *646:io_in[1] I *D user_module_334445762078310996
+*I *646:io_in[1] I *D user_module
 *CAP
 1 io_in[13] 0.000865337
 2 *646:io_in[1] 8.41585e-05
@@ -1340,7 +1340,7 @@ wbs_we_i I
 *D_NET *35 0.243988
 *CONN
 *P io_in[14] I
-*I *646:io_in[2] I *D user_module_334445762078310996
+*I *646:io_in[2] I *D user_module
 *CAP
 1 io_in[14] 0.000744959
 2 *646:io_in[2] 0.000613413
@@ -1360,7 +1360,7 @@ wbs_we_i I
 *D_NET *36 0.262763
 *CONN
 *P io_in[15] I
-*I *646:io_in[3] I *D user_module_334445762078310996
+*I *646:io_in[3] I *D user_module
 *CAP
 1 io_in[15] 0.000381466
 2 *646:io_in[3] 0.000314218
@@ -1380,7 +1380,7 @@ wbs_we_i I
 *D_NET *37 0.225137
 *CONN
 *P io_in[16] I
-*I *646:io_in[4] I *D user_module_334445762078310996
+*I *646:io_in[4] I *D user_module
 *CAP
 1 io_in[16] 0.000651206
 2 *646:io_in[4] 8.41585e-05
@@ -1404,7 +1404,7 @@ wbs_we_i I
 *D_NET *38 0.227213
 *CONN
 *P io_in[17] I
-*I *646:io_in[5] I *D user_module_334445762078310996
+*I *646:io_in[5] I *D user_module
 *CAP
 1 io_in[17] 0.000637835
 2 *646:io_in[5] 8.41585e-05
@@ -1426,7 +1426,7 @@ wbs_we_i I
 *D_NET *39 0.184817
 *CONN
 *P io_in[18] I
-*I *646:io_in[6] I *D user_module_334445762078310996
+*I *646:io_in[6] I *D user_module
 *CAP
 1 io_in[18] 0.000363376
 2 *646:io_in[6] 0.000291409
@@ -1447,7 +1447,7 @@ wbs_we_i I
 *D_NET *40 0.16761
 *CONN
 *P io_in[19] I
-*I *646:io_in[7] I *D user_module_334445762078310996
+*I *646:io_in[7] I *D user_module
 *CAP
 1 io_in[19] 0.000173823
 2 *646:io_in[7] 0.00035905
@@ -1468,7 +1468,7 @@ wbs_we_i I
 *D_NET *118 0.147845
 *CONN
 *P io_out[20] O
-*I *646:io_out[0] O *D user_module_334445762078310996
+*I *646:io_out[0] O *D user_module
 *CAP
 1 io_out[20] 0.000228093
 2 *646:io_out[0] 0.0004659
@@ -1489,7 +1489,7 @@ wbs_we_i I
 *D_NET *119 0.174395
 *CONN
 *P io_out[21] O
-*I *646:io_out[1] O *D user_module_334445762078310996
+*I *646:io_out[1] O *D user_module
 *CAP
 1 io_out[21] 0.000417646
 2 *646:io_out[1] 0.000705515
@@ -1508,7 +1508,7 @@ wbs_we_i I
 *D_NET *120 0.197025
 *CONN
 *P io_out[22] O
-*I *646:io_out[2] O *D user_module_334445762078310996
+*I *646:io_out[2] O *D user_module
 *CAP
 1 io_out[22] 0.000399556
 2 *646:io_out[2] 0.000879251
@@ -1527,7 +1527,7 @@ wbs_we_i I
 *D_NET *121 0.236288
 *CONN
 *P io_out[23] O
-*I *646:io_out[3] O *D user_module_334445762078310996
+*I *646:io_out[3] O *D user_module
 *CAP
 1 io_out[23] 0.000201941
 2 *646:io_out[3] 0.000439237
@@ -1549,7 +1549,7 @@ wbs_we_i I
 *D_NET *122 0.243058
 *CONN
 *P io_out[24] O
-*I *646:io_out[4] O *D user_module_334445762078310996
+*I *646:io_out[4] O *D user_module
 *CAP
 1 io_out[24] 0.000693009
 2 *646:io_out[4] 0.000278038
@@ -1570,7 +1570,7 @@ wbs_we_i I
 *D_NET *123 0.196109
 *CONN
 *P io_out[25] O
-*I *646:io_out[5] O *D user_module_334445762078310996
+*I *646:io_out[5] O *D user_module
 *CAP
 1 io_out[25] 0.000712865
 2 *646:io_out[5] 0.000772201
@@ -1591,7 +1591,7 @@ wbs_we_i I
 *D_NET *124 0.176396
 *CONN
 *P io_out[26] O
-*I *646:io_out[6] O *D user_module_334445762078310996
+*I *646:io_out[6] O *D user_module
 *CAP
 1 io_out[26] 0.000732807
 2 *646:io_out[6] 0.000452608
@@ -1613,7 +1613,7 @@ wbs_we_i I
 *D_NET *125 0.186842
 *CONN
 *P io_out[27] O
-*I *646:io_out[7] O *D user_module_334445762078310996
+*I *646:io_out[7] O *D user_module
 *CAP
 1 io_out[27] 0.000685262
 2 *646:io_out[7] 0.000147081
