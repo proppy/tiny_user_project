@@ -35,10 +35,10 @@ jobs:
       run: |
         python << EOF >> $GITHUB_STEP_SUMMARY
         import csv
-        import filepath
+        import pathlib
 
         print('# metrics')
-        metrics = filepath.Path('runs').glob('runs/*/reports/metrics.csv')[-1]
+        metrics = pathlib.Path('runs').glob('runs/*/reports/metrics.csv')[-1]
         with metrics.open() as f:
             d = list(csv.DictReader(f))[0]
             print('key|value')
