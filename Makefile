@@ -228,6 +228,4 @@ WOKWI_PROJECT_ID=334445762078310996
 
 .PHONY: fetch
 fetch:
-	curl https://wokwi.com/api/projects/$(WOKWI_PROJECT_ID)/verilog > verilog/rtl/user_module_$(WOKWI_PROJECT_ID).v
-	sed -i -e 's/USER_MODULE_ID/$(WOKWI_PROJECT_ID)/g' openlane/user_module/config.tcl openlane/user_project_wrapper/config.tcl verilog/rtl/user_project_wrapper.v
-
+	curl https://wokwi.com/api/projects/$(WOKWI_PROJECT_ID)/verilog | sed -e "s/user_module_$(WOKWI_PROJECT_ID)/user_module" > verilog/rtl/user_module.v

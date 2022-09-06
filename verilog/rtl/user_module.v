@@ -2,7 +2,7 @@
 
 `default_nettype none
 
-module user_module_334445762078310996(
+module user_module(
   input [7:0] io_in,
   output [7:0] io_out
 );

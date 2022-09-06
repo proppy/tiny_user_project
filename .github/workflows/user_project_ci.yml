@@ -244,8 +244,7 @@ jobs:
         python -m pip install gdstk
         python << EOF
         import gdstk
-        import pathlib
-        library = gdstk.read_gds(list(pathlib.Path('gds').glob('user_module_*.gds'))[-1])
+        library = gdstk.read_gds('gds/user_module.gds')
         top_cells = library.top_level()
         top_cells[0].write_svg('user_module.svg')
         EOF
@@ -293,7 +292,7 @@ jobs:
     - name: GDS2WebGL
       run: |
         python -m pip install gdspy pyclipper mapbox_earcut
-        python gds2webgl.py -i gds/user_module_*.gds -o index.html
+        python gds2webgl.py -i gds/user_module.gds -o index.html
     - name: populate webgl cache
       uses: actions/cache@v3
       with:

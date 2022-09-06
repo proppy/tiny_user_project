@@ -82,7 +82,7 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-user_module_334445762078310996 mprj (
+user_module mprj (
     .io_in (io_in[20:12]),
     .io_out(io_out[27:20]),
 );
