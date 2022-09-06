@@ -37,7 +37,7 @@ set ::env(VERILOG_FILES) "\
 
 # absolute die size
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 100 100"
+set ::env(DIE_AREA) "0 0 250 250"
 set ::env(FP_CORE_UTIL) 45
 set ::env(PL_BASIC_PLACEMENT) {1}
 
