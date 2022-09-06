@@ -244,14 +244,15 @@ jobs:
         python -m pip install gdstk
         python << EOF
         import gdstk
-        library = gdstk.read_gds('gds/user_project_wrapper.gds')
+        import pathlib
+        library = gdstk.read_gds(list(pathlib.Path('gds').glob('user_module_*.gds'))[-1])
         top_cells = library.top_level()
-        top_cells[0].write_svg('user_project_wrapped.svg')
+        top_cells[0].write_svg('user_module.svg')
         EOF
     - name: populate svg cache
       uses: actions/cache@v3
       with:
-        path: 'user_project_wrapper.svg'
+        path: 'user_module.svg'
         key: ${{ runner.os }}-svg-${{ github.run_id }}
 
   webgl:
@@ -285,7 +286,7 @@ jobs:
     - name: GDS2WebGL
       run: |
         python -m pip install gdspy pyclipper mapbox_earcut
-        python gds2webgl.py -i gds/user_project_wrapper.gds -o index.html
+        python gds2webgl.py -i gds/user_module_*.gds -o index.html
     - name: populate webgl cache
       uses: actions/cache@v3
       with:
@@ -306,7 +307,7 @@ jobs:
     - name: restore svg cache
       uses: actions/cache@v3
       with:
-        path: 'user_project_wrapper.svg'
+        path: 'user_module.svg'
         key: ${{ runner.os }}-svg-${{ github.run_id }}
     - name: restore webgl cache
       uses: actions/cache@v3
@@ -333,7 +334,7 @@ jobs:
         PAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')
         cat << EOF >> $GITHUB_STEP_SUMMARY
         # svg
-        ![svg]($PAGE_URL/user_project_wrapper.svg)
+        ![svg]($PAGE_URL/user_module.svg)
         # webgl
         [open preview]($PAGE_URL)
         EOF
