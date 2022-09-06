@@ -14,12 +14,11 @@ jobs:
   gds:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: setup
         run: |
           make setup
-          make precheck
 
       - name: harden
         run: |
@@ -39,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: setup
         run: |
           make precheck
@@ -49,7 +48,7 @@ jobs:
         with:
           path: gds
           key: ${{ runner.os }}-gds-${{ github.run_id }}
-          
+
       - name: check
         run: |
           make run-precheck
