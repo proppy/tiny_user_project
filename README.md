@@ -1,4 +1,4 @@
-# Tiny Caravel User Project
+# Tiny User Project
 
 Template for submitting [TinyTapeout](https://tinytapeout.com) based projects to the [Open MPW shuttle](https://developers.google.com/silicon) program.
 
