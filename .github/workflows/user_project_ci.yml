@@ -142,6 +142,10 @@ jobs:
       with:
         path: |
           ${{ env.PDK_ROOT }}
+          ${{ env.OPENLANE_ROOT }}
+          caravel/
+          mgmt_core_wrapper/
+          openlane.tar
         key: ${{ runner.os }}-setup-${{ env.SETUP_TAG }}
 
     - name: setup
