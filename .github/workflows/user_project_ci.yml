@@ -74,7 +74,7 @@ jobs:
 
     - name: show user_module reports
       run: |
-        cat << EOF << $GITHUB_STEP_SUMMARY
+        cat << EOF >> $GITHUB_STEP_SUMMARY
         ## manufacturability
 
         \`\`\`
@@ -105,7 +105,7 @@ jobs:
 
     - name: show user_project_wrapper reports
       run: |
-        cat << EOF << $GITHUB_STEP_SUMMARY
+        cat << EOF >> $GITHUB_STEP_SUMMARY
         ## manufacturability
 
         \`\`\`
