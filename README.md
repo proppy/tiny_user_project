@@ -1,12 +1,13 @@
-# Caravel User Project
+# Tiny Caravel User Project
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![UPRJ_CI](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml) [![Caravel Build](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml)
+Template for submitting [TinyTapeout](https://tinytapeout.com) based projects to the [Open MPW shuttle](https://developers.google.com/silicon) program.
 
-| :exclamation: Important Note            |
-|-----------------------------------------|
+## Usage
 
-## Please fill in your project documentation in this README.md file 
+1. [Generate](https://github.com/proppy/tiny_caravel_project_example/generate) a new project based on this template
 
-Refer to [README](docs/source/quickstart.rst) for a quick start of how to use caravel_user_project
+2. Create a new [Wokwi](https://wokwi.com/) project and update [WOKWI_PROJECT_ID](Makefile#L1).
 
-Refer to [README](docs/source/index.rst) for this sample project documentation. 
+3. Push and check the [![user_project_ci](https://github.com/proppy/tiny_caravel_project_example/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/proppy/tiny_caravel_project_example/actions/workflows/user_project_ci.yml) summary.
+
+4. Submit your project to the next [Open MPW shuttle](https://efabless.com/open_shuttle_program).
