@@ -177,7 +177,7 @@ jobs:
       run: |
         cat << EOF >> $GITHUB_STEP_SUMMARY
         \`\`\`
-        cat precheck_results/*/logs/precheck.log`
+        `cat precheck_results/*/logs/precheck.log`
         \`\`\`
         EOF
 
