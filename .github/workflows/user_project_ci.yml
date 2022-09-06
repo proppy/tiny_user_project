@@ -200,7 +200,8 @@ jobs:
         git config --local user.name "tinybot"
         git config --local user.email "bot@tinytapeout.com"
         git add .
-        git commit -m "harden project"
+        git commit -m "harden project [skip ci]"
+        git push origin main
 
   svg:
     needs: gds
