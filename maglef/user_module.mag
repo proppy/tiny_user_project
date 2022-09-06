@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1662469305
+timestamp 1662472275
 << obsli1 >>
 rect 1104 2159 48852 47345
 << obsm1 >>
@@ -97,7 +97,7 @@ string FIXED_BBOX 0 0 50000 50000
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 596062
-string GDS_FILE /home/runner/work/tiny_user_project/tiny_user_project/openlane/user_module/runs/22_09_06_13_00/results/signoff/user_module.magic.gds
+string GDS_FILE /home/runner/work/tiny_user_project/tiny_user_project/openlane/user_module/runs/22_09_06_13_49/results/signoff/user_module.magic.gds
 string GDS_START 23756
 << end >>
 
