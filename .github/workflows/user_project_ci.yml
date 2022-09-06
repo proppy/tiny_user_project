@@ -311,7 +311,7 @@ jobs:
       page_url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-    - name: restore svg cache
+    - name: restore img cache
       uses: actions/cache@v3
       with:
         path: 'user_module.png'
@@ -340,8 +340,8 @@ jobs:
         PAGE_URL=${{ needs.pages.outputs.page_url }}
         PAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')
         cat << EOF >> $GITHUB_STEP_SUMMARY
-        # svg
-        ![svg]($PAGE_URL/user_module.png)
+        # layout
+        ![layout]($PAGE_URL/user_module.png)
         # webgl
         [open preview]($PAGE_URL)
         EOF
