@@ -83,7 +83,7 @@ module user_project_wrapper #(
 /*--------------------------------------*/
 
 user_module mprj (
-    .io_in (io_in[20:12]),
+    .io_in (io_in[19:12]),
     .io_out(io_out[27:20]),
 );
 
