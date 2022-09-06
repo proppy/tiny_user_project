@@ -9,6 +9,7 @@ env:
   PDK_ROOT: "/home/runner/work/pdk"
   OPENLANE_ROOT: "/home/runner/work/openlane"
   PDK: "sky130A"
+  SETUP_TAG: "mpw-7a"
 
 jobs:
   gds:
@@ -16,29 +17,48 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: setup
+    - name: cache setup
+      id: cache-setup
+      uses: actions/cache@v3
+      with:
+        path: |
+          ${{ env.PDK_ROOT }}
+          ${{ env.OPENLANE_ROOT }}
+          caravel/
+          mgmt_core_wrapper/
+          openlane.tar
+        key: ${{ runner.os }}-setup-${{ env.SETUP_TAG }}
+
+    - if: steps.cache-setup.outputs.cache-hit != 'true'
+      name: setup
       run: |
         make setup
+        docker save efabless/openlane > openlane.tar
 
-    - name: harden
+    - if: steps.cache-setup.outputs.cache-hit == 'true'
+      name: restore setup
+      run: |
+        docker load < openlane.tar
+
+    - name: harden user_module
       run: |
         make fetch
         make user_module
-        make user_project_wrapper
 
     - name: setup python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
-    - name: show metrics
+    - name: show user_module metrics
       run: |
         python << EOF >> $GITHUB_STEP_SUMMARY
         import csv
         import pathlib
 
-        print('# metrics')
-        metrics = pathlib.Path('runs').glob('runs/*/reports/metrics.csv')[-1]
+        print('# user_module')
+        print('## metrics')
+        metrics = pathlib.Path('openlane/user_module/runs/user_module/reports/metrics.csv')
         with metrics.open() as f:
             d = list(csv.DictReader(f))[0]
             print('key|value')
@@ -47,13 +67,44 @@ jobs:
               print(f'{k}|{v}')
         EOF
 
-    - name: show manufacturability
+    - name: show user_module reports
       run: |
         cat << EOF << $GITHUB_STEP_SUMMARY
-        # manufacturability
+        ## manufacturability
 
         \`\`\`
-        `cat manufacturability.rpt`
+        `cat openlane/user_module/runs/user_module/reports/manufacturability.rpt`
+        \`\`\`
+        EOF
+
+    - name: harden user_project_wrapper
+      run: |
+        make user_project_wrapper
+
+    - name: show user_project_wrapper metrics
+      run: |
+        python << EOF >> $GITHUB_STEP_SUMMARY
+        import csv
+        import pathlib
+
+        print('# user_project_wrapper')
+        print('## metrics')
+        metrics = pathlib.Path('openlane/user_project_wrapper/runs/user_project_wrapper/metrics.csv')
+        with metrics.open() as f:
+            d = list(csv.DictReader(f))[0]
+            print('key|value')
+            print('---|-----')
+            for k,v in d:
+              print(f'{k}|{v}')
+        EOF
+
+    - name: show user_project_wrapper reports
+      run: |
+        cat << EOF << $GITHUB_STEP_SUMMARY
+        ## manufacturability
+
+        \`\`\`
+        `cat openlane/user_project_wrapper/runs/user_project_wrapper/reports/manufacturability.rpt`
         \`\`\`
         EOF
 
