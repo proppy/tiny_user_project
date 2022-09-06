@@ -239,7 +239,7 @@ jobs:
           spi/
           verilog/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
-    - name: create user_project_wrapper svg
+    - name: create user_module svg
       run: |
         python -m pip install gdstk
         python << EOF
@@ -249,11 +249,18 @@ jobs:
         top_cells = library.top_level()
         top_cells[0].write_svg('user_module.svg')
         EOF
-    - name: populate svg cache
+    - name: convert to png
+      run: |
+        python -m pip install cairosvg
+        python << EOF
+        import cairosvg
+        cairosvg.svg2png(url='user_module.svg', write_to='user_module.png')
+        EOF
+    - name: populate img cache
       uses: actions/cache@v3
       with:
-        path: 'user_module.svg'
-        key: ${{ runner.os }}-svg-${{ github.run_id }}
+        path: 'user_module.png'
+        key: ${{ runner.os }}-img-${{ github.run_id }}
 
   webgl:
     needs: gds
@@ -307,8 +314,8 @@ jobs:
     - name: restore svg cache
       uses: actions/cache@v3
       with:
-        path: 'user_module.svg'
-        key: ${{ runner.os }}-svg-${{ github.run_id }}
+        path: 'user_module.png'
+        key: ${{ runner.os }}-img-${{ github.run_id }}
     - name: restore webgl cache
       uses: actions/cache@v3
       with:
@@ -334,7 +341,7 @@ jobs:
         PAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')
         cat << EOF >> $GITHUB_STEP_SUMMARY
         # svg
-        ![svg]($PAGE_URL/user_module.svg)
+        ![svg]($PAGE_URL/user_module.png)
         # webgl
         [open preview]($PAGE_URL)
         EOF
