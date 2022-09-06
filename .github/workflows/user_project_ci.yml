@@ -14,41 +14,72 @@ jobs:
   gds:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-      - name: setup
-        run: |
-          make setup
+    - name: setup
+      run: |
+        make setup
 
-      - name: harden
-        run: |
-          make fetch
-          make user_module
-          make user_project_wrapper
+    - name: harden
+      run: |
+        make fetch
+        make user_module
+        make user_project_wrapper
 
-      - name: cache gds
-        uses: actions/cache@v3
-        with:
-          path: gds
-          key: ${{ runner.os }}-gds-${{ github.run_id }}
+    - name: setup python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: show metrics
+      run: |
+        python << EOF >> $GITHUB_STEP_SUMMARY
+        import csv
+        import filepath
+
+        print('# metrics')
+        metrics = filepath.Path('runs').glob('runs/*/reports/metrics.csv')[-1]
+        with metrics.open() as f:
+            d = list(csv.DictReader(f))[0]
+            print('key|value')
+            print('---|-----')
+            for k,v in d:
+              print(f'{k}|{v}')
+        EOF
+
+    - name: show manufacturability
+      run: |
+        cat << EOF << $GITHUB_STEP_SUMMARY
+        # manufacturability
+
+        \`\`\`
+        `cat manufacturability.rpt`
+        \`\`\`
+        EOF
+
+    - name: cache gds
+      uses: actions/cache@v3
+      with:
+        path: gds
+        key: ${{ runner.os }}-gds-${{ github.run_id }}
 
   precheck:
     needs:
     - gds
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-      - name: setup
-        run: |
-          make precheck
+    - name: setup
+      run: |
+        make precheck
 
-      - name: restore runs cache
-        uses: actions/cache@v3
-        with:
-          path: gds
-          key: ${{ runner.os }}-gds-${{ github.run_id }}
+    - name: restore runs cache
+      uses: actions/cache@v3
+      with:
+        path: gds
+        key: ${{ runner.os }}-gds-${{ github.run_id }}
 
-      - name: check
-        run: |
-          make run-precheck
+    - name: check
+      run: |
+        make run-precheck
