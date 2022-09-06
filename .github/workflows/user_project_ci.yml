@@ -173,6 +173,14 @@ jobs:
       run: |
         make run-precheck
 
+    - name: summary
+      run: |
+        cat << EOF >> $GITHUB_STEP_SUMMARY
+        \`\`\`
+        cat precheck_results/*/logs/precheck.log`
+        \`\`\`
+        EOF
+
   commit:
     needs:
     - precheck
