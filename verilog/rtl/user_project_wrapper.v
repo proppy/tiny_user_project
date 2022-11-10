@@ -82,11 +82,11 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-user_module mprj (
-    .io_in (io_in[19:12]),
-    .io_out(io_out[27:20]),
+tiny_user_project mprj (
+    .io_in (io_in),
+    .io_out(io_out),
+    .io_oeb(io_oeb)
 );
 
 endmodule	// user_project_wrapper
-
 `default_nettype wire

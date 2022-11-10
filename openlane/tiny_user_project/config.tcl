@@ -17,7 +17,7 @@
 set script_dir [file dirname [file normalize [info script]]]
 
 # has to match the module name from wokwi
-set ::env(DESIGN_NAME) user_module
+set ::env(DESIGN_NAME) tiny_user_project
 
 # save some time
 set ::env(RUN_KLAYOUT_XOR) 0
@@ -32,8 +32,9 @@ set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 # read all verilog files
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/cells.v
-	$script_dir/../../verilog/rtl/user_module.v"
+	$script_dir/../../verilog/rtl/cells.v \
+	$script_dir/../../verilog/rtl/user_module.v \
+	$script_dir/../../verilog/rtl/tiny_user_project.v"
 
 # absolute die size
 set ::env(FP_SIZING) absolute
