@@ -21,7 +21,7 @@ module tiny_user_project(
 );
 
 // pass input and output pins defined in user_defines.v
-user_module module (
+user_module mod (
     .io_in (io_in[19:12]),
     .io_out(io_out[27:20])
 );
@@ -29,4 +29,5 @@ user_module module (
 assign io_oeb[27:20] = 8'b0;
 
 endmodule	// tiny_user_project
+
 `default_nettype wire
