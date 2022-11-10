@@ -47,25 +47,25 @@ jobs:
       run: |
         docker load < openlane.tar
 
-    - name: harden user_module
+    - name: harden tiny_user_project
       run: |
         make fetch
-        make user_module
+        make tiny_user_project
 
     - name: setup python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
-    - name: show user_module metrics
+    - name: show tiny_user_project metrics
       run: |
         python << EOF >> $GITHUB_STEP_SUMMARY
         import csv
         import pathlib
 
-        print('# user_module')
+        print('# tiny_user_project')
         print('## metrics')
-        metrics = pathlib.Path('openlane/user_module/runs/user_module/reports/metrics.csv')
+        metrics = pathlib.Path('openlane/tiny_user_project/runs/tiny_user_project/reports/metrics.csv')
         with metrics.open() as f:
             d = list(csv.DictReader(f))[0]
             print('key|value')
@@ -74,13 +74,13 @@ jobs:
               print(f'{k}|{v}')
         EOF
 
-    - name: show user_module reports
+    - name: show tiny_user_project reports
       run: |
         cat << EOF >> $GITHUB_STEP_SUMMARY
         ## manufacturability
 
         \`\`\`
-        `cat openlane/user_module/runs/user_module/reports/manufacturability.rpt`
+        `cat openlane/tiny_user_project/runs/tiny_user_project/reports/manufacturability.rpt`
         \`\`\`
         EOF
 
@@ -242,26 +242,26 @@ jobs:
           spi/
           verilog/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
-    - name: create user_module svg
+    - name: create tiny_user_project svg
       run: |
         python -m pip install gdstk
         python << EOF
         import gdstk
-        library = gdstk.read_gds('gds/user_module.gds')
+        library = gdstk.read_gds('gds/tiny_user_project.gds')
         top_cells = library.top_level()
-        top_cells[0].write_svg('user_module.svg')
+        top_cells[0].write_svg('tiny_user_project.svg')
         EOF
     - name: convert to png
       run: |
         python -m pip install cairosvg
         python << EOF
         import cairosvg
-        cairosvg.svg2png(url='user_module.svg', write_to='user_module.png')
+        cairosvg.svg2png(url='tiny_user_project.svg', write_to='tiny_user_project.png')
         EOF
     - name: populate img cache
       uses: actions/cache@v3
       with:
-        path: 'user_module.png'
+        path: 'tiny_user_project.png'
         key: ${{ runner.os }}-img-${{ github.run_id }}
 
   webgl:
@@ -295,7 +295,7 @@ jobs:
     - name: GDS2WebGL
       run: |
         python -m pip install gdspy pyclipper mapbox_earcut
-        python gds2webgl.py -i gds/user_module.gds -o index.html
+        python gds2webgl.py -i gds/tiny_user_project.gds -o index.html
     - name: populate webgl cache
       uses: actions/cache@v3
       with:
@@ -317,7 +317,7 @@ jobs:
     - name: restore img cache
       uses: actions/cache@v3
       with:
-        path: 'user_module.png'
+        path: 'tiny_user_project.png'
         key: ${{ runner.os }}-img-${{ github.run_id }}
     - name: restore webgl cache
       uses: actions/cache@v3
@@ -344,7 +344,7 @@ jobs:
         PAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')
         cat << EOF >> $GITHUB_STEP_SUMMARY
         # layout
-        ![layout]($PAGE_URL/user_module.png)
+        ![layout]($PAGE_URL/tiny_user_project.png)
         # webgl
         [open preview]($PAGE_URL)
         EOF
