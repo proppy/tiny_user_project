@@ -182,6 +182,7 @@ jobs:
         EOF
 
   commit:
+    if: github.ref == 'main'
     needs:
     - precheck
     - gds
