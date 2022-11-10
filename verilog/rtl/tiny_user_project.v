@@ -20,7 +20,7 @@ module tiny_user_project(
   output [`MPRJ_IO_PADS-1:0] io_oeb
 );
 
-// pass input and output pins defined in  user_defines.v`
+// pass input and output pins defined in user_defines.v
 user_module module (
     .io_in (io_in[19:12]),
     .io_out(io_out[27:20])
