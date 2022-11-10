@@ -89,4 +89,5 @@ tiny_user_project mprj (
 );
 
 endmodule	// user_project_wrapper
+
 `default_nettype wire
