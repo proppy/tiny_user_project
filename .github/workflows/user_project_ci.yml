@@ -301,6 +301,7 @@ jobs:
         key: ${{ runner.os }}-webgl-${{ github.run_id }}
 
   pages:
+    if: github.ref == 'main'    
     needs:
     - svg
     - webgl
