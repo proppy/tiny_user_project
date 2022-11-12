@@ -15,8 +15,8 @@ permissions:
 env:
   PDK_ROOT: '/home/runner/work/pdk'
   OPENLANE_ROOT: '/home/runner/work/openlane'
-  PDK: 'sky130A'
-  SETUP_TAG: 'mpw-7a'
+  PDK: 'gf180mcuC'
+  SETUP_TAG: 'gfmpw-0a'
 
 jobs:
   gds:
