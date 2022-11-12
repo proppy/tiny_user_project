@@ -778,7 +778,7 @@ VIAS 2 ;
     - via4_5_3200_6200_6_3_1040_1040 + VIARULE Via4_GEN_HH + CUTSIZE 520 520  + LAYERS Metal4 Via4 Metal5  + CUTSPACING 520 520  + ENCLOSURE 300 240 120 240  + ROWCOL 6 3  ;
 END VIAS
 COMPONENTS 1 ;
-    - mprj user_proj_example + FIXED ( 1175000 1690000 ) N ;
+    - mprj user_module + FIXED ( 1175000 1690000 ) N ;
 END COMPONENTS
 PINS 645 ;
     - analog_io[0] + NET analog_io[0] + DIRECTION INOUT + USE SIGNAL
