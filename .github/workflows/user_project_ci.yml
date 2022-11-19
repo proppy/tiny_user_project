@@ -16,6 +16,7 @@ env:
   PDK_ROOT: '/home/runner/work/pdk'
   OPENLANE_ROOT: '/home/runner/work/openlane'
   PDK: 'gf180mcuC'
+  PDK_TECH: 'gf180mcu'
   SETUP_TAG: 'gfmpw-0a'
 
 jobs:
@@ -218,8 +219,9 @@ jobs:
         git commit -m "harden project [skip ci]"
         git push origin main
 
-  svg:
-    needs: gds
+  layout:
+    needs:
+    - gds
     runs-on: ubuntu-latest
     steps:
     - name: setup python
@@ -242,22 +244,19 @@ jobs:
           spi/
           verilog/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
-    - name: create tiny_user_project svg
+    - name: install klayout
       run: |
-        python -m pip install gdstk
-        python << EOF
-        import gdstk
-        library = gdstk.read_gds('gds/user_project_wrapper.gds')
-        top_cells = library.top_level()
-        top_cells[0].write_svg('user_project_wrapper.svg')
-        EOF
-    - name: convert to png
+        curl -O https://www.klayout.org/downloads/Ubuntu-18/klayout_0.27.12-1_amd64.deb
+        dpkg -i klayout_0.27.12-1_amd64.deb
+        sudo apt-get -f install
+        sudo apt-get install -yq xvfb
+    - name: save layout image
       run: |
-        python -m pip install cairosvg
-        python << EOF
-        import cairosvg
-        cairosvg.svg2png(url='user_project_wrapper.svg', write_to='user_project_wrapper.png')
-        EOF
+       cat << EOF > save_image.rb
+       mw = RBA::Application::instance.main_window
+       mw.current_view.save_image("#{$image_path}", 1000, 1000)
+       EOF
+       xvfb-run klayout -d 10 -z -n ${{ env.PDK }} -nn ${{ env.PDK_ROOT }}/${{ env.PDK }}/libs.tech/klayout/tech/${{ env.PDK_TECH }}.lyt -l ${{ env.PDK_ROOT }}/${{ env.PDK }}/libs.tech/klayout/tech/${{ env.PDK_TECH }}.lyp -r save_image.rb -rd image_path=user_project_wrapper.png user_project_wrapper.gds
     - name: populate img cache
       uses: actions/cache@v3
       with:
@@ -267,7 +266,7 @@ jobs:
   pages:
     if: github.ref_name == 'main'
     needs:
-    - svg
+    - layout
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
