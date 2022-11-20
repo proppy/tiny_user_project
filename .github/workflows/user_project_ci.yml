@@ -47,6 +47,11 @@ jobs:
       name: restore setup
       run: |
         docker load < openlane.tar
+        
+    - name: debug
+      run: |
+        find $OPENLANE_ROOT/
+        find $PDK_ROOT/
 
     - name: harden tiny_user_project
       run: |
