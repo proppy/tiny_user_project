@@ -17,7 +17,7 @@ env:
   OPENLANE_ROOT: '/home/runner/work/openlane'
   PDK: 'gf180mcuC'
   PDK_TECH: 'gf180mcu'
-  SETUP_TAG: 'gfmpw-0a'
+  SETUP_CACHE_KEY: 'gfmpw-0b'
 
 jobs:
   gds:
@@ -35,7 +35,7 @@ jobs:
           caravel/
           mgmt_core_wrapper/
           openlane.tar
-        key: ${{ runner.os }}-setup-${{ env.SETUP_TAG }}
+        key: ${{ runner.os }}-setup-${{ env.SETUP_CACHE_KEY }}
 
     - if: steps.cache-setup.outputs.cache-hit != 'true'
       name: setup
