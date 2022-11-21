@@ -284,7 +284,7 @@ jobs:
     - name: restore img cache
       uses: actions/cache@v3
       with:
-        path: 'user_project_wrapper.png'
+        path: 'tiny_user_project.png'
         key: ${{ runner.os }}-img-${{ github.run_id }}
     - name: setup pages
       uses: actions/configure-pages@v2
