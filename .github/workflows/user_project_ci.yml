@@ -225,8 +225,7 @@ jobs:
         git push origin main
 
   layout:
-    needs:
-    - gds
+    needs: gds
     runs-on: ubuntu-latest
     steps:
     - name: setup python
@@ -249,24 +248,26 @@ jobs:
           spi/
           verilog/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
-    - name: install klayout
+    - name: create tiny_user_project svg
       run: |
-        curl -L -O https://www.klayout.org/downloads/Ubuntu-20/klayout_0.27.12-1_amd64.deb
-        sudo dpkg -i klayout_0.27.12-1_amd64.deb || sudo apt-get -f install
-        sudo apt-get install -yq xvfb
-    - name: save layout image
+        python -m pip install gdstk
+        python << EOF
+        import gdstk
+        library = gdstk.read_gds('gds/tiny_user_project.gds')
+        top_cells = library.top_level()
+        top_cells[0].write_svg('tiny_user_project.svg')
+        EOF
+    - name: convert to png
       run: |
-       cat << EOF > save_image.rb
-       mw = RBA::Application::instance.main_window
-       mw.current_view.save_image("#{$image_path}", 1000, 1000)
-       EOF
-       TECH_PATH=$(readlink -f $PDK_ROOT/$PDK/libs.tech/klayout/tech/$PDK_TECH.lyt)
-       LAYER_PATH=$(readlink -f $PDK_ROOT/$PDK/libs.tech/klayout/tech/$PDK_TECH.lyp)
-       xvfb-run klayout -d 10 -z -n $PDK -nn $TECH_PATH -l $LAYER_PATH -r save_image.rb -rd image_path=user_project_wrapper.png user_project_wrapper.gds
+        python -m pip install cairosvg
+        python << EOF
+        import cairosvg
+        cairosvg.svg2png(url='tiny_user_project.svg', write_to='tiny_user_project.png')
+        EOF
     - name: populate img cache
       uses: actions/cache@v3
       with:
-        path: 'user_project_wrapper.png'
+        path: 'tiny_user_project.png'
         key: ${{ runner.os }}-img-${{ github.run_id }}
 
   pages:
@@ -305,5 +306,5 @@ jobs:
         PAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')
         cat << EOF >> $GITHUB_STEP_SUMMARY
         # layout
-        ![layout]($PAGE_URL/user_project_wrapper.png)
+        ![layout]($PAGE_URL/tiny_user_project.png)
         EOF
