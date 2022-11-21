@@ -260,7 +260,9 @@ jobs:
        mw = RBA::Application::instance.main_window
        mw.current_view.save_image("#{$image_path}", 1000, 1000)
        EOF
-       xvfb-run klayout -d 10 -z -n ${{ env.PDK }} -nn ${{ env.PDK_ROOT }}/${{ env.PDK }}/libs.tech/klayout/tech/${{ env.PDK_TECH }}.lyt -l ${{ env.PDK_ROOT }}/${{ env.PDK }}/libs.tech/klayout/tech/${{ env.PDK_TECH }}.lyp -r save_image.rb -rd image_path=user_project_wrapper.png user_project_wrapper.gds
+       TECH_PATH=$(readlink -f ${{ env.PDK_ROOT }}/${{ env.PDK }}/libs.tech/klayout/tech/${{ env.PDK_TECH }}.lyt)
+       LAYER_PATH=$(readlink -f ${{ env.PDK_ROOT }}/${{ env.PDK }}/libs.tech/klayout/tech/${{ env.PDK_TECH }}.lyp)
+       xvfb-run klayout -d 10 -z -n ${{ env.PDK }} -nn ${{ env.TECH_PATH }} -l ${{ env.LAYER_PATH }} -r save_image.rb -rd image_path=user_project_wrapper.png user_project_wrapper.gds
     - name: populate img cache
       uses: actions/cache@v3
       with:
