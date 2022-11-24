@@ -6,7 +6,7 @@ Template for submitting [TinyTapeout](https://tinytapeout.com) based projects to
 
 1. [Generate](https://github.com/proppy/tiny_user_project/generate) a new project based on this template
 
-1. [Set GitHub Pages](settings/pages) `Sources` as `GitHub Actions`.
+1. [Set GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part) `Sources` as `GitHub Actions`.
 
 1. Create a new [Wokwi](https://wokwi.com/projects/339800239192932947) project and update [`info.yaml`](info.yaml) with your `wokwi_id`.
 
