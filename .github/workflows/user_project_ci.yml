@@ -48,15 +48,20 @@ jobs:
       run: |
         docker load < openlane.tar
 
-    - name: harden tiny_user_project
-      run: |
-        make fetch
-        make tiny_user_project
-
     - name: setup python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
+      run: |
+        python -m pip install requests PyYAML
+
+    - name: fetch verilog and build config
+      run: |
+        python configure.py --create-user-config
+        
+    - name: harden tiny_user_project
+      run: |
+        make tiny_user_project
 
     - name: show tiny_user_project metrics
       run: |
