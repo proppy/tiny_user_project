@@ -79,7 +79,7 @@ def get_project_source(yaml):
         with open(os.path.join('verilog/rtl', "wokwi_diagram.json"), 'wb') as fh:
             fh.write(r.content)
 
-        return [filename, 'cells.v']
+        return [f'verilog/rtl/{filename}', 'verilog/rtl/cells.v']
 
     # else it's HDL, so check source files
     else:
