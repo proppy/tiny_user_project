@@ -57,7 +57,7 @@ def get_project_source(yaml):
             logging.warning("couldn't download {}".format(url))
             exit(1)
 
-        filename = "user_module_{}.v".format(wokwi_id)
+        filename = "user_module.v"
         with open(os.path.join('verilog/rtl', filename), 'wb') as fh:
             fh.write(r.content)
 
