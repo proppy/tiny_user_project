@@ -126,8 +126,8 @@ def get_top_module(yaml):
 def get_io_ranges(yaml):
     input_range = (GPIO_VALID_RANGE[0], GPIO_VALID_RANGE[0]+len(yaml['documentation']['inputs']))
     output_range = (input_range[1], input_range[1]+len(yaml['documentation']['outputs']))
-    gpio_last = output_range[1]
-    if gpio_last > GPIO_VALID_RANGE[1]:
+    gpio_end = output_range[1]
+    if gpio_end > GPIO_VALID_RANGE[1]:
         raise Exception('ETOOMANY IOs')
     return (input_range, output_range)
 
