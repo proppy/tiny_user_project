@@ -11,6 +11,8 @@ import csv
 import re
 import jinja2
 
+GPIO_VALID_RANGE = [8, 36]
+
 def load_yaml(yaml_file):
     with open(yaml_file, "r") as stream:
         return (yaml.safe_load(stream))
@@ -121,9 +123,12 @@ def get_top_module(yaml):
     else:
         return yaml['project']['top_module']
 
-def get_io_ranges(yaml, gpio_base=5):
-    input_range = (gpio_base, gpio_base+len(yaml['documentation']['inputs']))
+def get_io_ranges(yaml):
+    input_range = (GPIO_VALID_RANGE[0], GPIO_VALID_RANGE[0]+len(yaml['documentation']['inputs']))
     output_range = (input_range[1], input_range[1]+len(yaml['documentation']['outputs']))
+    gpio_last = output_range[1]
+    if gpio_last > GPIO_VALID_RANGE[1]:
+        raise Exception('ETOOMANY IOs')
     return (input_range, output_range)
 
 def get_stats():

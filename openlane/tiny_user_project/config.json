@@ -2,7 +2,7 @@
     "DESIGN_NAME": "tiny_user_project",
     "DESIGN_IS_CORE": 0,
     "VERILOG_FILES": [
-        "dir::../../verilog/rtl/user_module_334445762078310996.v",
+        "dir::../../verilog/rtl/user_module.v",
         "dir::../../verilog/rtl/cells.v",
         "dir::../../verilog/rtl/defines.v",
         "dir::../../verilog/rtl/tiny_user_project.v"
