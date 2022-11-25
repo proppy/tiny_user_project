@@ -124,8 +124,12 @@ def get_top_module(yaml):
         return yaml['project']['top_module']
 
 def get_io_ranges(yaml):
-    input_range = (GPIO_VALID_RANGE[0], GPIO_VALID_RANGE[0]+len(yaml['documentation']['inputs']))
-    output_range = (input_range[1], input_range[1]+len(yaml['documentation']['outputs']))
+    is_named = lambda io: len(io) and io != 'none'
+    input_count = len([io for io in yaml['documentation']['inputs'] if is_named(io)])
+    output_count = len([io for io in yaml['documentation']['outputs'] if is_named(io)])
+    input_range = (GPIO_VALID_RANGE[0], GPIO_VALID_RANGE[0]+input_count)
+    output_range = (input_range[1], input_range[1]+output_count)
+    print(input_range, output_range)
     gpio_end = output_range[1]
     if gpio_end > GPIO_VALID_RANGE[1]:
         raise Exception('ETOOMANY IOs')
