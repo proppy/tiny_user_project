@@ -306,7 +306,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
-          tiny_user_project_synth.png
+          tiny_user_project_synth.svg
           tiny_user_project_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
     - name: setup pages
