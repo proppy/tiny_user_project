@@ -260,6 +260,7 @@ jobs:
         key: ${{ runner.os }}-gds-${{ github.run_id }}
     - name: create synth svg
       run: |
+        sudo apt-get install -yq graphviz
         python -m pip install graphviz
         python << EOF
         import graphviz
