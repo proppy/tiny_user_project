@@ -267,6 +267,8 @@ jobs:
         dot = graphviz.Source.from_file('openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot')
         dot.render('tiny_user_project_synth.svg', format='svg')
         EOF
+        cat openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
+        cat tiny_user_project_synth.svg
     - name: create layout svg
       run: |
         python -m pip install gdstk
