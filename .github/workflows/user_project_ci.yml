@@ -265,10 +265,8 @@ jobs:
         python << EOF
         import graphviz
         dot = graphviz.Source.from_file('openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot')
-        dot.render('tiny_user_project_synth.svg', format='svg')
+        dot.render('tiny_user_project_synth.png', format='png')
         EOF
-        cat openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
-        cat tiny_user_project_synth.svg
     - name: create layout svg
       run: |
         python -m pip install gdstk
@@ -289,7 +287,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
-          tiny_user_project_synth.svg
+          tiny_user_project_synth.png
           tiny_user_project_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
 
@@ -308,7 +306,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
-          tiny_user_project_synth.svg
+          tiny_user_project_synth.png
           tiny_user_project_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
     - name: setup pages
@@ -331,7 +329,7 @@ jobs:
         PAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')
         cat << EOF >> $GITHUB_STEP_SUMMARY
         # synth
-        ![synth]($PAGE_URL/tiny_user_project_synth.svg)
+        ![synth]($PAGE_URL/tiny_user_project_synth.png)
         # layout
         ![layout]($PAGE_URL/tiny_user_project_layout.png)
         EOF
