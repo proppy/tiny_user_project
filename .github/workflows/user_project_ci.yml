@@ -66,6 +66,7 @@ jobs:
     - name: harden tiny_user_project
       run: |
         make tiny_user_project
+        find openlane/tiny_user_project/runs/tiny_user_project/
 
     - name: show tiny_user_project metrics
       run: |
@@ -97,6 +98,7 @@ jobs:
     - name: harden user_project_wrapper
       run: |
         make user_project_wrapper
+        find openlane/user_project_wrapper/runs/user_project_wrapper/
 
     - name: show user_project_wrapper metrics
       run: |
