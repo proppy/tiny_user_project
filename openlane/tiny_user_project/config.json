@@ -2,10 +2,10 @@
     "DESIGN_NAME": "tiny_user_project",
     "DESIGN_IS_CORE": 0,
     "VERILOG_FILES": [
-	"dir::../../verilog/rtl/defines.v",
-	"dir::../../verilog/rtl/cells.v",
-	"dir::../../verilog/rtl/user_module.v",
-	"dir::../../verilog/rtl/tiny_user_project.v"	
+        "dir::../../verilog/rtl/user_module.v",
+        "dir::../../verilog/rtl/cells.v",
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../verilog/rtl/tiny_user_project.v"
     ],
     "CLOCK_PERIOD": 10,
     "CLOCK_PORT": "",
@@ -14,20 +14,24 @@
     "DIE_AREA": "0 0 250 250",
     "PL_BASIC_PLACEMENT": 1,
     "PL_TARGET_DENSITY": 0.55,
-    "VDD_NETS": ["vccd1"],
-    "GND_NETS": ["vssd1"],
+    "VDD_NETS": [
+        "vccd1"
+    ],
+    "GND_NETS": [
+        "vssd1"
+    ],
     "DIODE_INSERTION_STRATEGY": 4,
     "RUN_CVC": 1,
     "RUN_KLAYOUT_XOR": 0,
     "RUN_KLAYOUT_DRC": 0,
     "pdk::sky130*": {
-	"DECAP_CELL": [
-	    "sky130_fd_sc_hd__decap_3",
-	    "sky130_fd_sc_hd__decap_4",
-	    "sky130_fd_sc_hd__decap_6",
-	    "sky130_fd_sc_hd__decap_8",
-	    "sky130_ef_sc_hd__decap_12"
-	],
+        "DECAP_CELL": [
+            "sky130_fd_sc_hd__decap_3",
+            "sky130_fd_sc_hd__decap_4",
+            "sky130_fd_sc_hd__decap_6",
+            "sky130_fd_sc_hd__decap_8",
+            "sky130_ef_sc_hd__decap_12"
+        ],
         "RT_MAX_LAYER": "met4"
     },
     "pdk::gf180mcuC": {

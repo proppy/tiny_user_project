@@ -60,7 +60,7 @@ jobs:
 
     - name: fetch verilog and build config
       run: |
-        python -m pip install requests PyYAML
+        python -m pip install requests PyYAML Jinja2
         python configure.py --create-user-config
         
     - name: harden tiny_user_project
