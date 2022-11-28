@@ -47,7 +47,7 @@ jobs:
       name: restore setup
       run: |
         docker load < openlane.tar
-        
+
     - name: debug
       run: |
         find $OPENLANE_ROOT/
@@ -62,7 +62,7 @@ jobs:
       run: |
         python -m pip install requests PyYAML Jinja2
         python configure.py --create-user-config
-        
+
     - name: harden tiny_user_project
       run: |
         make tiny_user_project
@@ -140,6 +140,8 @@ jobs:
           spef/
           spi/
           verilog/
+          openlane/tiny_user_project/runs/tiny_user_project/
+          openlane/user_project_wrapper/runs/user_project_wrapper/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
   precheck:
@@ -179,6 +181,8 @@ jobs:
           spef/
           spi/
           verilog/
+          openlane/tiny_user_project/runs/tiny_user_project/
+          openlane/user_project_wrapper/runs/user_project_wrapper/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
     - name: check
@@ -217,8 +221,10 @@ jobs:
           spef/
           spi/
           verilog/
+          openlane/tiny_user_project/runs/tiny_user_project/
+          openlane/user_project_wrapper/runs/user_project_wrapper/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
-      
+
     - name: commit
       run: |
         git status
@@ -251,27 +257,39 @@ jobs:
           spef/
           spi/
           verilog/
+          openlane/tiny_user_project/runs/tiny_user_project/
+          openlane/user_project_wrapper/runs/user_project_wrapper/
         key: ${{ runner.os }}-gds-${{ github.run_id }}
-    - name: create tiny_user_project svg
+    - name: create synth svg
+      run: |
+        python -m pip install graphviz
+        python << EOF
+        import graphviz
+        dot = graphviz.Source.from_file('openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot')
+        dot.render('synth.svg', format='svg')
+        EOF
+    - name: create layout svg
       run: |
         python -m pip install gdstk
         python << EOF
         import gdstk
         library = gdstk.read_gds('gds/tiny_user_project.gds')
         top_cells = library.top_level()
-        top_cells[0].write_svg('tiny_user_project.svg')
+        top_cells[0].write_svg('tiny_user_project_layout.svg')
         EOF
     - name: convert to png
       run: |
         python -m pip install cairosvg
         python << EOF
         import cairosvg
-        cairosvg.svg2png(url='tiny_user_project.svg', write_to='tiny_user_project.png')
+        cairosvg.svg2png(url='tiny_user_project_layout.svg', write_to='tiny_user_project_layout.png')
         EOF
     - name: populate img cache
       uses: actions/cache@v3
       with:
-        path: 'tiny_user_project.png'
+        path: |
+          tiny_user_project_synth.svg
+          tiny_user_project_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
 
   pages:
@@ -288,7 +306,9 @@ jobs:
     - name: restore img cache
       uses: actions/cache@v3
       with:
-        path: 'tiny_user_project.png'
+        path: |
+          tiny_user_project_synth.png
+          tiny_user_project_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
     - name: setup pages
       uses: actions/configure-pages@v2
@@ -306,9 +326,11 @@ jobs:
     steps:
     - name: add gds preview
       run: |
-        PAGE_URL=${{ needs.pages.outputs.page_url }} 
+        PAGE_URL=${{ needs.pages.outputs.page_url }}
         PAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')
         cat << EOF >> $GITHUB_STEP_SUMMARY
+        # synth
+        ![synth]($PAGE_URL/tiny_user_project_synth.svg)
         # layout
-        ![layout]($PAGE_URL/tiny_user_project.png)
+        ![layout]($PAGE_URL/tiny_user_project_layout.png)
         EOF
