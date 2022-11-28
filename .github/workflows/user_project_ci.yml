@@ -142,8 +142,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/
-          openlane/user_project_wrapper/runs/user_project_wrapper/
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot          
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
   precheck:
@@ -183,8 +182,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/
-          openlane/user_project_wrapper/runs/user_project_wrapper/
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot          
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
     - name: check
@@ -223,8 +221,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/
-          openlane/user_project_wrapper/runs/user_project_wrapper/
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
     - name: commit
@@ -259,8 +256,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/
-          openlane/user_project_wrapper/runs/user_project_wrapper/
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot          
         key: ${{ runner.os }}-gds-${{ github.run_id }}
     - name: create synth svg
       run: |
