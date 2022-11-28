@@ -265,7 +265,7 @@ jobs:
         python << EOF
         import graphviz
         dot = graphviz.Source.from_file('openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot')
-        dot.render('synth.svg', format='svg')
+        dot.render('tiny_user_project_synth.svg', format='svg')
         EOF
     - name: create layout svg
       run: |
