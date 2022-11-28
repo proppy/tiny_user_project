@@ -142,7 +142,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot          
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
   precheck:
@@ -182,7 +182,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot          
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
     - name: check
@@ -256,17 +256,12 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot          
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
     - name: create synth svg
       run: |
         sudo apt-get install -yq graphviz
-        python -m pip install graphviz
-        python << EOF
-        import graphviz
-        dot = graphviz.Source.from_file('openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot')
-        dot.render('tiny_user_project_synth.png', format='png')
-        EOF
+        dot -Tpng openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot > tiny_user_project_synth.png
     - name: create layout svg
       run: |
         python -m pip install gdstk
