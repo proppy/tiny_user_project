@@ -74,6 +74,8 @@ ifeq ($(PDK),gf180mcuC)
 	export OPENLANE_TAG?=2022.11.17
 endif
 
+PRECHECK_TAG ?= $(MPW_TAG)
+
 # Include Caravel Makefile Targets
 .PHONY: % : check-caravel
 %:
@@ -209,7 +211,7 @@ uninstall:
 # Default installs to the user home directory, override by "export PRECHECK_ROOT=<precheck-installation-path>"
 .PHONY: precheck
 precheck:
-	@git clone --depth=1 --branch $(MPW_TAG) https://github.com/efabless/mpw_precheck.git $(PRECHECK_ROOT)
+	@git clone --depth=1 --branch $(PRECHECK_TAG) https://github.com/efabless/mpw_precheck.git $(PRECHECK_ROOT)
 	@docker pull efabless/mpw_precheck:latest
 
 .PHONY: run-precheck
