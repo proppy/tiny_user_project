@@ -32,12 +32,14 @@ Table of contents
 
    -  `Repo Integration <#repo-integration>`__
    -  `Verilog Integration <#verilog-integration>`__
+   -  `GPIO Configuration <#gpio-configuration>`__
    -  `Layout Integration <#layout-integration>`__
 
 -  `Running Full Chip Simulation <#running-full-chip-simulation>`__
 -  `User Project Wrapper Requirements <#user-project-wrapper-requirements>`__
 -  `Hardening the User Project using
    Openlane <#hardening-the-user-project-using-openlane>`__
+-  `Running Timing Analysis on Existing Projects <#running-timing-analysis-on-existing-projects>`__
 -  `Checklist for Open-MPW
    Submission <#checklist-for-open-mpw-submission>`__
 
@@ -247,6 +249,40 @@ for more information.
 
    </p>
 
+-------------------
+GPIO Configuration
+-------------------
+
+You are required to specify the power-on default configuration for each GPIO in Caravel.  The default configuration provide the state the GPIO will come up on power up.  The configuration can be changed by the management SoC during firmware execution.
+
+Configuration settings define whether the GPIO is configured to connect to the user project area or the managment SoC.  They also determine whether IOs are inputs or outputs, digital or analog, as well as whether pull-up or pull-down resistors are configured for inputs.
+
+GPIOs are configured by assigning predefined values for each IO in the file `verilog/rtl/user_defines.v <https://github.com/efabless/caravel_user_project/blob/main/verilog/rtl/user_defines.v>`_ in your project.
+
+You need to assigned configuration values for GPIO[5] thru GPIO[37]. 
+
+GPIO[0] thru GPIO[4] are preset and cannot be changed.
+
+The following values are redefined for assigning to GPIOs.
+
+
+- GPIO_MODE_MGMT_STD_INPUT_NOPULL
+- GPIO_MODE_MGMT_STD_INPUT_PULLDOWN
+- GPIO_MODE_MGMT_STD_INPUT_PULLUP
+- GPIO_MODE_MGMT_STD_OUTPUT
+- GPIO_MODE_MGMT_STD_BIDIRECTIONAL
+- GPIO_MODE_MGMT_STD_ANALOG
+
+- GPIO_MODE_USER_STD_INPUT_NOPULL
+- GPIO_MODE_USER_STD_INPUT_PULLDOWN
+- GPIO_MODE_USER_STD_INPUT_PULLUP
+- GPIO_MODE_USER_STD_OUTPUT
+- GPIO_MODE_USER_STD_BIDIRECTIONAL
+- GPIO_MODE_USER_STD_OUT_MONITORED 
+- GPIO_MODE_USER_STD_ANALOG
+
+
+MPW_Prececk includes a check to confirm each GPIO is assigned a valid value.
 
 -------------------
 Layout Integration
@@ -456,6 +492,38 @@ Then, you can run the precheck by running
    make run-precheck
 
 This will run all the precheck checks on your project and will produce the logs under the ``checks`` directory.
+
+Running Timing Analysis on Existing Projects
+========================================================
+
+Start by updating the Makefile for your project.  Starting in the project root...
+
+.. code:: bash
+  
+   curl -k https://raw.githubusercontent.com/efabless/caravel_user_project/main/Makefile > Makefile
+   
+   make setup-timing-scripts
+   
+   make install
+   
+   make install_mcw
+   
+
+This will update Caravel design files and install the scripts for running timing. 
+
+
+Then, you can run then run timing by the following...
+
+.. code:: bash
+
+   make extract-parasitics
+   
+   make create-spef-mapping
+   
+   make caravel-sta
+   
+
+A summary of timing results is provided at the end of the flow. 
 
 
 Other Miscellaneous Targets

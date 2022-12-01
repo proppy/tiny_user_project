@@ -28,8 +28,7 @@ openlane_cmd = \
 	-save \
 	-tag $(OPENLANE_RUN_TAG) \
 	-overwrite \
-	-ignore_mismatches \
-        -verbose 99"
+	-ignore_mismatches"
 openlane_cmd_interactive = "flow.tcl -it -file $$(realpath ./$*/interactive.tcl)"
 
 docker_mounts = \
@@ -62,7 +61,7 @@ list:
 
 .PHONY: $(designs)
 $(designs) : export current_design=$@
-$(designs) : % : ./%/config.json
+$(designs) : % : ./%/config.tcl
 ifneq (,$(wildcard ./$(current_design)/interactive.tcl))
 	$(docker_run) \
 		$(OPENLANE_IMAGE_NAME) sh -c $(openlane_cmd_interactive)

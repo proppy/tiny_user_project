@@ -24,7 +24,7 @@ SIM?=RTL
 CARAVEL_LITE?=1
 
 # PDK switch varient
-export PDK?=sky130A
+export PDK?=gf180mcuC
 #export PDK?=gf180mcuC
 export PDKPATH?=$(PDK_ROOT)/$(PDK)
 
@@ -33,8 +33,8 @@ export PDKPATH?=$(PDK_ROOT)/$(PDK)
 ifeq ($(PDK),sky130A)
 	SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
 	export OPEN_PDKS_COMMIT?=0059588eebfc704681dc2368bd1d33d96281d10f
-	export OPENLANE_TAG?=2022.10.20
-	MPW_TAG ?= mpw-7d
+	export OPENLANE_TAG?=2022.11.19
+	MPW_TAG ?= mpw-8a
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite
@@ -51,8 +51,8 @@ endif
 ifeq ($(PDK),sky130B)
 	SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
 	export OPEN_PDKS_COMMIT?=0059588eebfc704681dc2368bd1d33d96281d10f
-	export OPENLANE_TAG?=2022.10.20
-	MPW_TAG ?= mpw-7d
+	export OPENLANE_TAG?=2022.11.19
+	MPW_TAG ?= mpw-8a
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite
@@ -67,11 +67,15 @@ endif
 endif
 
 ifeq ($(PDK),gf180mcuC)
+
 	MPW_TAG ?= gfmpw-0b
 	CARAVEL_NAME := caravel
 	CARAVEL_REPO := https://github.com/efabless/caravel-gf180mcu
 	CARAVEL_TAG := $(MPW_TAG)
-	export OPENLANE_TAG?=2022.11.17
+	#OPENLANE_TAG=ddfeab57e3e8769ea3d40dda12be0460e09bb6d9
+	export OPEN_PDKS_COMMIT?=0059588eebfc704681dc2368bd1d33d96281d10f
+	export OPENLANE_TAG?=2022.11.19
+
 endif
 
 # Include Caravel Makefile Targets
@@ -311,7 +315,7 @@ extract-parasitics: ./verilog/gl/user_project_wrapper.v
 	@$(MAKE) -C $(TIMING_ROOT) -f $(TIMING_ROOT)/timing.mk rcx-user_project_wrapper
 	@cat ./tmp-macros-list
 	@rm ./tmp-macros-list
-
+	
 .PHONY: caravel-sta
 caravel-sta: ./env/spef-mapping.tcl
 	@$(MAKE) -C $(TIMING_ROOT) -f $(TIMING_ROOT)/timing.mk caravel-timing-typ
