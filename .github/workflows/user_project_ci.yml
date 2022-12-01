@@ -17,7 +17,7 @@ env:
   OPENLANE_ROOT: '/home/runner/work/openlane'
   PDK: 'gf180mcuC'
   PDK_TECH: 'gf180mcu'
-  SETUP_TAG: 'gfmpw-0a'
+  SETUP_TAG: 'gfmpw-0b'
 
 jobs:
   gds:
