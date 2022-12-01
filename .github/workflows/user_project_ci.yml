@@ -63,20 +63,20 @@ jobs:
         python -m pip install requests PyYAML Jinja2
         python configure.py --create-user-config
 
-    - name: harden tiny_user_project
+    - name: harden user_proj_example
       run: |
-        make tiny_user_project
-        find openlane/tiny_user_project/runs/tiny_user_project/
+        make user_proj_example
+        find openlane/user_proj_example/runs/user_proj_example/
 
-    - name: show tiny_user_project metrics
+    - name: show user_proj_example metrics
       run: |
         python << EOF >> $GITHUB_STEP_SUMMARY
         import csv
         import pathlib
 
-        print('# tiny_user_project')
+        print('# user_proj_example')
         print('## metrics')
-        metrics = pathlib.Path('openlane/tiny_user_project/runs/tiny_user_project/reports/metrics.csv')
+        metrics = pathlib.Path('openlane/user_proj_example/runs/user_proj_example/reports/metrics.csv')
         with metrics.open() as f:
             d = list(csv.DictReader(f))[0]
             print('key|value')
@@ -85,13 +85,13 @@ jobs:
               print(f'{k}|{v}')
         EOF
 
-    - name: show tiny_user_project reports
+    - name: show user_proj_example reports
       run: |
         cat << EOF >> $GITHUB_STEP_SUMMARY
         ## manufacturability
 
         \`\`\`
-        `cat openlane/tiny_user_project/runs/tiny_user_project/reports/manufacturability.rpt`
+        `cat openlane/user_proj_example/runs/user_proj_example/reports/manufacturability.rpt`
         \`\`\`
         EOF
 
@@ -142,7 +142,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
+          openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
   precheck:
@@ -182,7 +182,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
+          openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
     - name: check
@@ -221,7 +221,7 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
+          openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
     - name: commit
@@ -256,34 +256,34 @@ jobs:
           spef/
           spi/
           verilog/
-          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
+          openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
     - name: create synth svg
       run: |
         sudo apt-get install -yq graphviz
-        dot -Tpng openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot > tiny_user_project_synth.png
+        dot -Tpng openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/post_techmap.dot > user_proj_example_synth.png
     - name: create layout svg
       run: |
         python -m pip install gdstk
         python << EOF
         import gdstk
-        library = gdstk.read_gds('gds/tiny_user_project.gds')
+        library = gdstk.read_gds('gds/user_proj_example.gds')
         top_cells = library.top_level()
-        top_cells[0].write_svg('tiny_user_project_layout.svg')
+        top_cells[0].write_svg('user_proj_example_layout.svg')
         EOF
     - name: convert to png
       run: |
         python -m pip install cairosvg
         python << EOF
         import cairosvg
-        cairosvg.svg2png(url='tiny_user_project_layout.svg', write_to='tiny_user_project_layout.png')
+        cairosvg.svg2png(url='user_proj_example_layout.svg', write_to='user_proj_example_layout.png')
         EOF
     - name: populate img cache
       uses: actions/cache@v3
       with:
         path: |
-          tiny_user_project_synth.png
-          tiny_user_project_layout.png
+          user_proj_example_synth.png
+          user_proj_example_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
 
   pages:
@@ -301,8 +301,8 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
-          tiny_user_project_synth.png
-          tiny_user_project_layout.png
+          user_proj_example_synth.png
+          user_proj_example_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
     - name: setup pages
       uses: actions/configure-pages@v2
@@ -324,7 +324,7 @@ jobs:
         PAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')
         cat << EOF >> $GITHUB_STEP_SUMMARY
         # synth
-        ![synth]($PAGE_URL/tiny_user_project_synth.png)
+        ![synth]($PAGE_URL/user_proj_example_synth.png)
         # layout
-        ![layout]($PAGE_URL/tiny_user_project_layout.png)
+        ![layout]($PAGE_URL/user_proj_example_layout.png)
         EOF
