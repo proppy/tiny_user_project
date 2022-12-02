@@ -11,9 +11,9 @@
     "CLOCK_PORT": "",
     "CLOCK_NET": "",
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 1100 800",
+    "DIE_AREA": "0 0 600 680",
     "PL_BASIC_PLACEMENT": 1,
-    "PL_TARGET_DENSITY": 0.55,
+    "PL_TARGET_DENSITY": 0.70,
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
     "VDD_NETS": [
         "vdd"
