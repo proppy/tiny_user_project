@@ -223,7 +223,7 @@ jobs:
         python -m pip install cairosvg
         python << EOF
         import cairosvg
-        cairosvg.svg2png(url='tiny_user_project_layout.svg', write_to='tiny_user_project_layout.png')
+        cairosvg.svg2png(url='tiny_user_project_layout.svg', write_to='tiny_user_project_layout.png', output_width=500)        
         EOF
     - name: populate img cache
       uses: actions/cache@v3
