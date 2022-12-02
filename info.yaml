@@ -3,8 +3,8 @@
 project:
   wokwi_id:    334445762078310996        # If using wokwi, set this to your project's ID
 #  source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here
-#    - counter.v
-#    - decoder.v
+#    - verilog/rtl/counter.v
+#    - verilog/rtl/decoder.v
 #  top_module:  "seven_segment_seconds"      # put the name of your top module here, make it unique by prepending your github username
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
