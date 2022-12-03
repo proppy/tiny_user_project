@@ -58,7 +58,7 @@
 {%- elif io_out_range[0] <= n < io_out_range[1] %}
 `define USER_CONFIG_GPIO_{{ n }}_INIT `GPIO_MODE_USER_STD_OUTPUT
 {%- else %}
-`define USER_CONFIG_GPIO_{{ n }}_INIT `GPIO_MODE_INVALID
+`define USER_CONFIG_GPIO_{{ n }}_INIT `GPIO_MODE_USER_STD_INPUT_PULLDOWN
 {%- endif -%}
 {% endfor %}
 
