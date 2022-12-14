@@ -24,6 +24,13 @@ jobs:
   gds:
     runs-on: ubuntu-latest
     steps:
+    - name: maximize build space
+      uses: easimon/maximize-build-space@master
+      with:
+        root-reserve-mb: 512
+        swap-size-mb: 8096
+        remove-dotnet: 'true'
+
     - uses: actions/checkout@v3
 
     - name: cache setup
@@ -95,11 +102,6 @@ jobs:
         `cat openlane/tiny_user_project/runs/tiny_user_project/reports/manufacturability.rpt`
         \`\`\`
         EOF
-
-    - name: increase swap space
-      uses: pierotofy/set-swap-space@master
-      with:
-        swap-size-gb: 20
 
     - name: harden user_project_wrapper
       run: |
