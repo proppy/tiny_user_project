@@ -96,6 +96,11 @@ jobs:
         \`\`\`
         EOF
 
+    - name: increase swap space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 20
+
     - name: harden user_project_wrapper
       run: |
         make user_project_wrapper
