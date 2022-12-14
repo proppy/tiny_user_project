@@ -40,7 +40,7 @@ module la_test2_tb;
 
 	`ifdef ENABLE_SDF
 		initial begin
-			$sdf_annotate("../../../sdf/user_module.sdf", uut.mprj) ;
+			$sdf_annotate("../../../sdf/user_proj_example.sdf", uut.mprj) ;
 			$sdf_annotate("../../../sdf/user_project_wrapper.sdf", uut.mprj.mprj) ;
 			$sdf_annotate("../../../mgmt_core_wrapper/sdf/DFFRAM.sdf", uut.soc.DFFRAM_0) ;
 			// these breaks the simulation

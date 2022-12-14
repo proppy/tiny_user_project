@@ -7,20 +7,13 @@
         "dir::../../verilog/rtl/defines.v",
         "dir::../../verilog/rtl/tiny_user_project.v"
     ],
-    "CLOCK_PERIOD": 24,
     "CLOCK_PORT": "",
     "CLOCK_NET": "",
     "FP_SIZING": "absolute",
     "DIE_AREA": "0 0 600 680",
     "PL_BASIC_PLACEMENT": 1,
-    "PL_TARGET_DENSITY": 0.70,
+    "PL_TARGET_DENSITY": 0.7,
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
-    "VDD_NETS": [
-        "vdd"
-    ],
-    "GND_NETS": [
-        "vss"
-    ],
     "DIODE_INSERTION_STRATEGY": 4,
     "RUN_CVC": 1,
     "RUN_KLAYOUT_XOR": 0,
@@ -33,11 +26,25 @@
             "sky130_fd_sc_hd__decap_8",
             "sky130_ef_sc_hd__decap_12"
         ],
-        "RT_MAX_LAYER": "met4"
+	"CLOCK_PERIOD": 10.0,	
+        "RT_MAX_LAYER": "met4",
+	"VDD_NETS": [
+            "vccd1"
+	],
+	"GND_NETS": [
+            "vssd1"
+	]
     },
     "pdk::gf180mcuC": {
         "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+	"CLOCK_PERIOD": 24.0,
         "RT_MAX_LAYER": "Metal4",
-        "SYNTH_MAX_FANOUT": 4
+        "SYNTH_MAX_FANOUT": 4,
+	"VDD_NETS": [
+	    "vdd"
+	],
+	"GND_NETS": [
+	    "vss"
+	]
     }
 }
