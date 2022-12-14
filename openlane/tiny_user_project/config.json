@@ -10,7 +10,7 @@
     "CLOCK_PORT": "",
     "CLOCK_NET": "",
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 450 470",
+    "DIE_AREA": "0 0 600 680",
     "PL_BASIC_PLACEMENT": 1,
     "PL_TARGET_DENSITY": 0.7,
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
