@@ -11596,1982 +11596,1982 @@ wbs_sel_i[3] I
 wbs_stb_i I
 wbs_we_i I
 
-*D_NET *39 0.000695583
+*D_NET *39 0.000513383
 *CONN
 *P io_oeb[0] O
 *I *11165:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[0] 0.000347791
-2 *11165:ZN 0.000347791
+1 io_oeb[0] 0.000256691
+2 *11165:ZN 0.000256691
 *RES
 1 *11165:ZN io_oeb[0] 11.655 
 *END
 
-*D_NET *40 0.000758959
+*D_NET *40 0.000566878
 *CONN
 *P io_oeb[10] O
 *I *11001:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[10] 0.00037948
-2 *11001:ZN 0.00037948
+1 io_oeb[10] 0.000283439
+2 *11001:ZN 0.000283439
 *RES
 1 *11001:ZN io_oeb[10] 11.655 
 *END
 
-*D_NET *41 0.0010409
+*D_NET *41 0.000788895
 *CONN
 *P io_oeb[11] O
 *I *11003:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[11] 0.000496591
-2 *11003:ZN 0.000496591
-3 io_oeb[11] io_oeb[18] 4.77151e-05
+1 io_oeb[11] 0.000362225
+2 *11003:ZN 0.000362225
+3 io_oeb[11] io_oeb[18] 6.44445e-05
 *RES
 1 *11003:ZN io_oeb[11] 12.735 
 *END
 
-*D_NET *42 0.00124692
+*D_NET *42 0.000972984
 *CONN
 *P io_oeb[12] O
 *I *11004:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[12] 0.000623462
-2 *11004:ZN 0.000623462
+1 io_oeb[12] 0.000486492
+2 *11004:ZN 0.000486492
 *RES
 1 *11004:ZN io_oeb[12] 9.135 
 *END
 
-*D_NET *43 0.000628172
+*D_NET *43 0.000475831
 *CONN
 *P io_oeb[13] O
 *I *11005:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[13] 0.000314086
-2 *11005:ZN 0.000314086
+1 io_oeb[13] 0.000237916
+2 *11005:ZN 0.000237916
 *RES
 1 *11005:ZN io_oeb[13] 11.115 
 *END
 
-*D_NET *44 0.00124692
+*D_NET *44 0.000972984
 *CONN
 *P io_oeb[14] O
 *I *11006:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[14] 0.000623462
-2 *11006:ZN 0.000623462
+1 io_oeb[14] 0.000486492
+2 *11006:ZN 0.000486492
 3 io_oeb[14] io_oeb[30] 0
 *RES
 1 *11006:ZN io_oeb[14] 9.135 
 *END
 
-*D_NET *45 0.0015227
+*D_NET *45 0.00118723
 *CONN
 *P io_oeb[15] O
 *I *11007:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[15] 0.000761351
-2 *11007:ZN 0.000761351
+1 io_oeb[15] 0.000593617
+2 *11007:ZN 0.000593617
 3 io_oeb[15] io_out[32] 0
 *RES
 1 *11007:ZN io_oeb[15] 10.215 
 *END
 
-*D_NET *46 0.00125599
+*D_NET *46 0.000983945
 *CONN
 *P io_oeb[16] O
 *I *11008:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[16] 0.000568856
-2 *11008:ZN 0.000568856
-3 io_oeb[16] la_data_out[23] 0.000118278
+1 io_oeb[16] 0.000420623
+2 *11008:ZN 0.000420623
+3 io_oeb[16] la_data_out[23] 0.000142699
 *RES
 1 *11008:ZN io_oeb[16] 9.135 
 *END
 
-*D_NET *47 0.00124692
+*D_NET *47 0.000972984
 *CONN
 *P io_oeb[17] O
 *I *11009:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[17] 0.000623462
-2 *11009:ZN 0.000623462
+1 io_oeb[17] 0.000486492
+2 *11009:ZN 0.000486492
 *RES
 1 *11009:ZN io_oeb[17] 9.135 
 *END
 
-*D_NET *48 0.00186313
+*D_NET *48 0.00141287
 *CONN
 *P io_oeb[18] O
 *I *11010:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[18] 0.000907707
-2 *11010:ZN 0.000907707
-3 io_oeb[11] io_oeb[18] 4.77151e-05
+1 io_oeb[18] 0.000674214
+2 *11010:ZN 0.000674214
+3 io_oeb[11] io_oeb[18] 6.44445e-05
 *RES
 1 *11010:ZN io_oeb[18] 15.975 
 *END
 
-*D_NET *49 0.00153434
+*D_NET *49 0.00120153
 *CONN
 *P io_oeb[19] O
 *I *11011:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[19] 0.000692092
-2 *11011:ZN 0.000692092
-3 io_oeb[19] la_data_out[50] 0.000150157
+1 io_oeb[19] 0.000511003
+2 *11011:ZN 0.000511003
+3 io_oeb[19] la_data_out[50] 0.000179524
 *RES
 1 *11011:ZN io_oeb[19] 10.215 
 *END
 
-*D_NET *50 0.0015227
+*D_NET *50 0.00118723
 *CONN
 *P io_oeb[1] O
 *I *10992:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[1] 0.000761351
-2 *10992:ZN 0.000761351
+1 io_oeb[1] 0.000593617
+2 *10992:ZN 0.000593617
 *RES
 1 *10992:ZN io_oeb[1] 10.215 
 *END
 
-*D_NET *51 0.00171593
+*D_NET *51 0.00130593
 *CONN
 *P io_oeb[20] O
 *I *11012:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[20] 0.000857966
-2 *11012:ZN 0.000857966
+1 io_oeb[20] 0.000652965
+2 *11012:ZN 0.000652965
 *RES
 1 *11012:ZN io_oeb[20] 10.845 
 *END
 
-*D_NET *52 0.00124692
+*D_NET *52 0.000972984
 *CONN
 *P io_oeb[21] O
 *I *11014:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[21] 0.000623462
-2 *11014:ZN 0.000623462
+1 io_oeb[21] 0.000486492
+2 *11014:ZN 0.000486492
 *RES
 1 *11014:ZN io_oeb[21] 9.135 
 *END
 
-*D_NET *53 0.000485048
+*D_NET *53 0.00035832
 *CONN
 *P io_oeb[22] O
 *I *11015:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[22] 0.000242524
-2 *11015:ZN 0.000242524
+1 io_oeb[22] 0.00017916
+2 *11015:ZN 0.00017916
 *RES
 1 *11015:ZN io_oeb[22] 11.025 
 *END
 
-*D_NET *54 0.0015227
+*D_NET *54 0.00118723
 *CONN
 *P io_oeb[23] O
 *I *11016:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[23] 0.000761351
-2 *11016:ZN 0.000761351
+1 io_oeb[23] 0.000593617
+2 *11016:ZN 0.000593617
 3 io_oeb[23] io_oeb[9] 0
 4 io_oeb[23] la_data_out[7] 0
 *RES
 1 *11016:ZN io_oeb[23] 10.215 
 *END
 
-*D_NET *55 0.000652498
+*D_NET *55 0.000481557
 *CONN
 *P io_oeb[24] O
 *I *11017:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[24] 0.000326249
-2 *11017:ZN 0.000326249
+1 io_oeb[24] 0.000240779
+2 *11017:ZN 0.000240779
 *RES
 1 *11017:ZN io_oeb[24] 11.475 
 *END
 
-*D_NET *56 0.000652498
+*D_NET *56 0.000481557
 *CONN
 *P io_oeb[25] O
 *I *11018:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[25] 0.000326249
-2 *11018:ZN 0.000326249
+1 io_oeb[25] 0.000240779
+2 *11018:ZN 0.000240779
 *RES
 1 *11018:ZN io_oeb[25] 11.475 
 *END
 
-*D_NET *57 0.000652498
+*D_NET *57 0.000481557
 *CONN
 *P io_oeb[26] O
 *I *11019:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[26] 0.000326249
-2 *11019:ZN 0.000326249
+1 io_oeb[26] 0.000240779
+2 *11019:ZN 0.000240779
 *RES
 1 *11019:ZN io_oeb[26] 11.475 
 *END
 
-*D_NET *58 0.00150507
+*D_NET *58 0.00115269
 *CONN
 *P io_oeb[27] O
 *I *11020:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[27] 0.000752537
-2 *11020:ZN 0.000752537
+1 io_oeb[27] 0.000576344
+2 *11020:ZN 0.000576344
 *RES
 1 *11020:ZN io_oeb[27] 19.035 
 *END
 
-*D_NET *59 0.000441933
+*D_NET *59 0.000326469
 *CONN
 *P io_oeb[28] O
 *I *11021:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[28] 0.000220966
-2 *11021:ZN 0.000220966
+1 io_oeb[28] 0.000163235
+2 *11021:ZN 0.000163235
 *RES
 1 *11021:ZN io_oeb[28] 10.845 
 *END
 
-*D_NET *60 0.000850885
+*D_NET *60 0.000638295
 *CONN
 *P io_oeb[29] O
 *I *11022:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[29] 0.000425443
-2 *11022:ZN 0.000425443
+1 io_oeb[29] 0.000319147
+2 *11022:ZN 0.000319147
 *RES
 1 *11022:ZN io_oeb[29] 12.015 
 *END
 
-*D_NET *61 0.000888682
+*D_NET *61 0.00067882
 *CONN
 *P io_oeb[2] O
 *I *10993:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[2] 0.000444341
-2 *10993:ZN 0.000444341
+1 io_oeb[2] 0.00033941
+2 *10993:ZN 0.00033941
 *RES
 1 *10993:ZN io_oeb[2] 12.015 
 *END
 
-*D_NET *62 0.001954
+*D_NET *62 0.00149529
 *CONN
 *P io_oeb[30] O
 *I *11023:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[30] 0.000976999
-2 *11023:ZN 0.000976999
+1 io_oeb[30] 0.000747647
+2 *11023:ZN 0.000747647
 3 io_oeb[14] io_oeb[30] 0
 *RES
 1 *11023:ZN io_oeb[30] 16.335 
 *END
 
-*D_NET *63 0.000715875
+*D_NET *63 0.000535053
 *CONN
 *P io_oeb[31] O
 *I *11025:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[31] 0.000357937
-2 *11025:ZN 0.000357937
+1 io_oeb[31] 0.000267527
+2 *11025:ZN 0.000267527
 *RES
 1 *11025:ZN io_oeb[31] 11.475 
 *END
 
-*D_NET *64 0.00154385
+*D_NET *64 0.00121807
 *CONN
 *P io_oeb[32] O
 *I *11026:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[32] 0.00073169
-2 *11026:ZN 0.00073169
-3 io_oeb[32] la_data_out[0] 8.04696e-05
+1 io_oeb[32] 0.000550855
+2 *11026:ZN 0.000550855
+3 io_oeb[32] la_data_out[0] 0.000116358
 *RES
 1 *11026:ZN io_oeb[32] 10.215 
 *END
 
-*D_NET *65 0.000888682
+*D_NET *65 0.00067882
 *CONN
 *P io_oeb[33] O
 *I *11027:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[33] 0.000444341
-2 *11027:ZN 0.000444341
+1 io_oeb[33] 0.00033941
+2 *11027:ZN 0.00033941
 *RES
 1 *11027:ZN io_oeb[33] 12.015 
 *END
 
-*D_NET *66 0.000715875
+*D_NET *66 0.000535053
 *CONN
 *P io_oeb[34] O
 *I *11028:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[34] 0.000357937
-2 *11028:ZN 0.000357937
+1 io_oeb[34] 0.000267527
+2 *11028:ZN 0.000267527
 *RES
 1 *11028:ZN io_oeb[34] 11.475 
 *END
 
-*D_NET *67 0.000758959
+*D_NET *67 0.000566878
 *CONN
 *P io_oeb[35] O
 *I *11029:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[35] 0.00037948
-2 *11029:ZN 0.00037948
+1 io_oeb[35] 0.000283439
+2 *11029:ZN 0.000283439
 *RES
 1 *11029:ZN io_oeb[35] 11.655 
 *END
 
-*D_NET *68 0.0015227
+*D_NET *68 0.00118723
 *CONN
 *P io_oeb[36] O
 *I *11030:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[36] 0.000761351
-2 *11030:ZN 0.000761351
+1 io_oeb[36] 0.000593617
+2 *11030:ZN 0.000593617
 *RES
 1 *11030:ZN io_oeb[36] 10.215 
 *END
 
-*D_NET *69 0.00049069
+*D_NET *69 0.000366087
 *CONN
 *P io_oeb[37] O
 *I *11031:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[37] 0.000210551
-2 *11031:ZN 0.000210551
-3 io_oeb[37] la_data_out[14] 6.95892e-05
+1 io_oeb[37] 0.000148073
+2 *11031:ZN 0.000148073
+3 io_oeb[37] la_data_out[14] 6.9941e-05
 *RES
 1 *11031:ZN io_oeb[37] 11.025 
 *END
 
-*D_NET *70 0.000899727
+*D_NET *70 0.000677886
 *CONN
 *P io_oeb[3] O
 *I *10994:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[3] 0.000449863
-2 *10994:ZN 0.000449863
+1 io_oeb[3] 0.000338943
+2 *10994:ZN 0.000338943
 *RES
 1 *10994:ZN io_oeb[3] 12.195 
 *END
 
-*D_NET *71 0.000807801
+*D_NET *71 0.00060647
 *CONN
 *P io_oeb[4] O
 *I *10995:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[4] 0.0004039
-2 *10995:ZN 0.0004039
+1 io_oeb[4] 0.000303235
+2 *10995:ZN 0.000303235
 *RES
 1 *10995:ZN io_oeb[4] 11.835 
 *END
 
-*D_NET *72 0.0015227
+*D_NET *72 0.00118723
 *CONN
 *P io_oeb[5] O
 *I *10996:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[5] 0.000761351
-2 *10996:ZN 0.000761351
+1 io_oeb[5] 0.000593617
+2 *10996:ZN 0.000593617
 *RES
 1 *10996:ZN io_oeb[5] 10.215 
 *END
 
-*D_NET *73 0.000899727
+*D_NET *73 0.000677886
 *CONN
 *P io_oeb[6] O
 *I *10997:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[6] 0.000449863
-2 *10997:ZN 0.000449863
+1 io_oeb[6] 0.000338943
+2 *10997:ZN 0.000338943
 *RES
 1 *10997:ZN io_oeb[6] 12.195 
 *END
 
-*D_NET *74 0.0015227
+*D_NET *74 0.00118723
 *CONN
 *P io_oeb[7] O
 *I *10998:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[7] 0.000761351
-2 *10998:ZN 0.000761351
+1 io_oeb[7] 0.000593617
+2 *10998:ZN 0.000593617
 *RES
 1 *10998:ZN io_oeb[7] 10.215 
 *END
 
-*D_NET *75 0.000807801
+*D_NET *75 0.00060647
 *CONN
 *P io_oeb[8] O
 *I *10999:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[8] 0.0004039
-2 *10999:ZN 0.0004039
+1 io_oeb[8] 0.000303235
+2 *10999:ZN 0.000303235
 *RES
 1 *10999:ZN io_oeb[8] 11.835 
 *END
 
-*D_NET *76 0.00123984
+*D_NET *76 0.000974172
 *CONN
 *P io_oeb[9] O
 *I *11000:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_oeb[9] 0.000577784
-2 *11000:ZN 0.000577784
-3 io_oeb[9] io_out[12] 8.42708e-05
+1 io_oeb[9] 0.000431848
+2 *11000:ZN 0.000431848
+3 io_oeb[9] io_out[12] 0.000110476
 4 io_oeb[23] io_oeb[9] 0
 *RES
 1 *11000:ZN io_oeb[9] 13.095 
 *END
 
-*D_NET *77 0.00207959
+*D_NET *77 0.00161966
 *CONN
 *P io_out[0] O
 *I *11124:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[0] 0.00103979
-2 *11124:ZN 0.00103979
+1 io_out[0] 0.000809828
+2 *11124:ZN 0.000809828
 *RES
 1 *11124:ZN io_out[0] 13.005 
 *END
 
-*D_NET *78 0.0015227
+*D_NET *78 0.00118723
 *CONN
 *P io_out[10] O
 *I *11135:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[10] 0.000761351
-2 *11135:ZN 0.000761351
+1 io_out[10] 0.000593617
+2 *11135:ZN 0.000593617
 *RES
 1 *11135:ZN io_out[10] 10.215 
 *END
 
-*D_NET *79 0.00124692
+*D_NET *79 0.000972984
 *CONN
 *P io_out[11] O
 *I *11136:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[11] 0.000623462
-2 *11136:ZN 0.000623462
+1 io_out[11] 0.000486492
+2 *11136:ZN 0.000486492
 *RES
 1 *11136:ZN io_out[11] 9.135 
 *END
 
-*D_NET *80 0.00156028
+*D_NET *80 0.0012426
 *CONN
 *P io_out[12] O
 *I *11137:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[12] 0.000738002
-2 *11137:ZN 0.000738002
-3 io_oeb[9] io_out[12] 8.42708e-05
+1 io_out[12] 0.00056606
+2 *11137:ZN 0.00056606
+3 io_oeb[9] io_out[12] 0.000110476
 *RES
 1 *11137:ZN io_out[12] 10.215 
 *END
 
-*D_NET *81 0.000847227
+*D_NET *81 0.000649801
 *CONN
 *P io_out[13] O
 *I *11138:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[13] 0.000396306
-2 *11138:ZN 0.000396306
-3 io_out[13] la_data_out[21] 5.46144e-05
+1 io_out[13] 0.000293039
+2 *11138:ZN 0.000293039
+3 io_out[13] la_data_out[21] 6.3724e-05
 *RES
 1 *11138:ZN io_out[13] 11.835 
 *END
 
-*D_NET *82 0.000843699
+*D_NET *82 0.0006454
 *CONN
 *P io_out[14] O
 *I *11139:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[14] 0.000421849
-2 *11139:ZN 0.000421849
+1 io_out[14] 0.0003227
+2 *11139:ZN 0.0003227
 *RES
 1 *11139:ZN io_out[14] 11.835 
 *END
 
-*D_NET *83 0.00121003
+*D_NET *83 0.000948237
 *CONN
 *P io_out[15] O
 *I *11140:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[15] 0.000545874
-2 *11140:ZN 0.000545874
-3 io_out[15] la_data_out[44] 0.000118278
+1 io_out[15] 0.000402769
+2 *11140:ZN 0.000402769
+3 io_out[15] la_data_out[44] 0.000142699
 *RES
 1 *11140:ZN io_out[15] 8.955 
 *END
 
-*D_NET *84 0.000942811
+*D_NET *84 0.000709711
 *CONN
 *P io_out[16] O
 *I *11141:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[16] 0.000471406
-2 *11141:ZN 0.000471406
+1 io_out[16] 0.000354856
+2 *11141:ZN 0.000354856
 *RES
 1 *11141:ZN io_out[16] 12.375 
 *END
 
-*D_NET *85 0.00124692
+*D_NET *85 0.000972984
 *CONN
 *P io_out[17] O
 *I *11142:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[17] 0.000623462
-2 *11142:ZN 0.000623462
+1 io_out[17] 0.000486492
+2 *11142:ZN 0.000486492
 *RES
 1 *11142:ZN io_out[17] 9.135 
 *END
 
-*D_NET *86 0.00260502
+*D_NET *86 0.00198151
 *CONN
 *P io_out[18] O
 *I *11143:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[18] 0.00125842
-2 *11143:ZN 0.00125842
-3 io_out[18] la_data_out[40] 8.81855e-05
+1 io_out[18] 0.000945041
+2 *11143:ZN 0.000945041
+3 io_out[18] la_data_out[40] 9.14225e-05
 *RES
 1 *11143:ZN io_out[18] 23.265 
 *END
 
-*D_NET *87 0.0015227
+*D_NET *87 0.00118723
 *CONN
 *P io_out[19] O
 *I *11145:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[19] 0.000761351
-2 *11145:ZN 0.000761351
+1 io_out[19] 0.000593617
+2 *11145:ZN 0.000593617
 *RES
 1 *11145:ZN io_out[19] 10.215 
 *END
 
-*D_NET *88 0.00125599
+*D_NET *88 0.000983945
 *CONN
 *P io_out[1] O
 *I *11125:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[1] 0.000568856
-2 *11125:ZN 0.000568856
-3 io_out[1] la_data_out[43] 0.000118278
+1 io_out[1] 0.000420623
+2 *11125:ZN 0.000420623
+3 io_out[1] la_data_out[43] 0.000142699
 *RES
 1 *11125:ZN io_out[1] 9.135 
 *END
 
-*D_NET *89 0.000758959
+*D_NET *89 0.000566878
 *CONN
 *P io_out[20] O
 *I *11146:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[20] 0.00037948
-2 *11146:ZN 0.00037948
+1 io_out[20] 0.000283439
+2 *11146:ZN 0.000283439
 *RES
 1 *11146:ZN io_out[20] 11.655 
 *END
 
-*D_NET *90 0.000628172
+*D_NET *90 0.000475831
 *CONN
 *P io_out[21] O
 *I *11147:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[21] 0.000314086
-2 *11147:ZN 0.000314086
+1 io_out[21] 0.000237916
+2 *11147:ZN 0.000237916
 *RES
 1 *11147:ZN io_out[21] 11.115 
 *END
 
-*D_NET *91 0.000485048
+*D_NET *91 0.00035832
 *CONN
 *P io_out[22] O
 *I *11148:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[22] 0.000242524
-2 *11148:ZN 0.000242524
+1 io_out[22] 0.00017916
+2 *11148:ZN 0.00017916
 *RES
 1 *11148:ZN io_out[22] 11.025 
 *END
 
-*D_NET *92 0.000843699
+*D_NET *92 0.0006454
 *CONN
 *P io_out[23] O
 *I *11149:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[23] 0.000421849
-2 *11149:ZN 0.000421849
+1 io_out[23] 0.0003227
+2 *11149:ZN 0.0003227
 *RES
 1 *11149:ZN io_out[23] 11.835 
 *END
 
-*D_NET *93 0.00126029
+*D_NET *93 0.000984502
 *CONN
 *P io_out[24] O
 *I *11150:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[24] 0.000630143
-2 *11150:ZN 0.000630143
+1 io_out[24] 0.000492251
+2 *11150:ZN 0.000492251
 3 io_out[24] la_data_out[62] 0
 *RES
 1 *11150:ZN io_out[24] 9.225 
 *END
 
-*D_NET *94 0.000942811
+*D_NET *94 0.000709711
 *CONN
 *P io_out[25] O
 *I *11151:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[25] 0.000471406
-2 *11151:ZN 0.000471406
+1 io_out[25] 0.000354856
+2 *11151:ZN 0.000354856
 *RES
 1 *11151:ZN io_out[25] 12.375 
 *END
 
-*D_NET *95 0.00124692
+*D_NET *95 0.000972984
 *CONN
 *P io_out[26] O
 *I *11152:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[26] 0.000623462
-2 *11152:ZN 0.000623462
+1 io_out[26] 0.000486492
+2 *11152:ZN 0.000486492
 *RES
 1 *11152:ZN io_out[26] 9.135 
 *END
 
-*D_NET *96 0.00124692
+*D_NET *96 0.000972984
 *CONN
 *P io_out[27] O
 *I *11153:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[27] 0.000623462
-2 *11153:ZN 0.000623462
+1 io_out[27] 0.000486492
+2 *11153:ZN 0.000486492
 *RES
 1 *11153:ZN io_out[27] 9.135 
 *END
 
-*D_NET *97 0.0015227
+*D_NET *97 0.00118723
 *CONN
 *P io_out[28] O
 *I *11154:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[28] 0.000761351
-2 *11154:ZN 0.000761351
+1 io_out[28] 0.000593617
+2 *11154:ZN 0.000593617
 *RES
 1 *11154:ZN io_out[28] 10.215 
 *END
 
-*D_NET *98 0.00156127
+*D_NET *98 0.00120626
 *CONN
 *P io_out[29] O
 *I *11156:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[29] 0.000780633
-2 *11156:ZN 0.000780633
+1 io_out[29] 0.000603129
+2 *11156:ZN 0.000603129
 *RES
 1 *11156:ZN io_out[29] 19.1798 
 *END
 
-*D_NET *99 0.000790829
+*D_NET *99 0.000599214
 *CONN
 *P io_out[2] O
 *I *11126:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[2] 0.000365121
-2 *11126:ZN 0.000365121
-3 io_out[2] wbs_ack_o 6.05871e-05
+1 io_out[2] 0.000264637
+2 *11126:ZN 0.000264637
+3 io_out[2] wbs_ack_o 6.9941e-05
 *RES
 1 *11126:ZN io_out[2] 11.745 
 *END
 
-*D_NET *100 0.0015227
+*D_NET *100 0.00118723
 *CONN
 *P io_out[30] O
 *I *11157:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[30] 0.000761351
-2 *11157:ZN 0.000761351
+1 io_out[30] 0.000593617
+2 *11157:ZN 0.000593617
 *RES
 1 *11157:ZN io_out[30] 10.215 
 *END
 
-*D_NET *101 0.00124692
+*D_NET *101 0.000972984
 *CONN
 *P io_out[31] O
 *I *11158:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[31] 0.000623462
-2 *11158:ZN 0.000623462
+1 io_out[31] 0.000486492
+2 *11158:ZN 0.000486492
 *RES
 1 *11158:ZN io_out[31] 9.135 
 *END
 
-*D_NET *102 0.00161994
+*D_NET *102 0.00126123
 *CONN
 *P io_out[32] O
 *I *11159:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[32] 0.000809971
-2 *11159:ZN 0.000809971
+1 io_out[32] 0.000630617
+2 *11159:ZN 0.000630617
 3 io_oeb[15] io_out[32] 0
 *RES
 1 *11159:ZN io_out[32] 10.665 
 *END
 
-*D_NET *103 0.000652498
+*D_NET *103 0.000481557
 *CONN
 *P io_out[33] O
 *I *11160:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[33] 0.000326249
-2 *11160:ZN 0.000326249
+1 io_out[33] 0.000240779
+2 *11160:ZN 0.000240779
 *RES
 1 *11160:ZN io_out[33] 11.475 
 *END
 
-*D_NET *104 0.00124692
+*D_NET *104 0.000972984
 *CONN
 *P io_out[34] O
 *I *11161:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[34] 0.000623462
-2 *11161:ZN 0.000623462
+1 io_out[34] 0.000486492
+2 *11161:ZN 0.000486492
 *RES
 1 *11161:ZN io_out[34] 9.135 
 *END
 
-*D_NET *105 0.00129289
+*D_NET *105 0.00100869
 *CONN
 *P io_out[35] O
 *I *11162:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[35] 0.000646444
-2 *11162:ZN 0.000646444
+1 io_out[35] 0.000504346
+2 *11162:ZN 0.000504346
 *RES
 1 *11162:ZN io_out[35] 9.315 
 *END
 
-*D_NET *106 0.00125599
+*D_NET *106 0.000983945
 *CONN
 *P io_out[36] O
 *I *11163:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[36] 0.000568856
-2 *11163:ZN 0.000568856
-3 io_out[36] la_data_out[48] 0.000118278
+1 io_out[36] 0.000420623
+2 *11163:ZN 0.000420623
+3 io_out[36] la_data_out[48] 0.000142699
 *RES
 1 *11163:ZN io_out[36] 9.135 
 *END
 
-*D_NET *107 0.000715875
+*D_NET *107 0.000535053
 *CONN
 *P io_out[37] O
 *I *11164:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[37] 0.000357937
-2 *11164:ZN 0.000357937
+1 io_out[37] 0.000267527
+2 *11164:ZN 0.000267527
 *RES
 1 *11164:ZN io_out[37] 11.475 
 *END
 
-*D_NET *108 0.0015227
+*D_NET *108 0.00118723
 *CONN
 *P io_out[3] O
 *I *11127:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[3] 0.000761351
-2 *11127:ZN 0.000761351
+1 io_out[3] 0.000593617
+2 *11127:ZN 0.000593617
 *RES
 1 *11127:ZN io_out[3] 10.215 
 *END
 
-*D_NET *109 0.00124692
+*D_NET *109 0.000972984
 *CONN
 *P io_out[4] O
 *I *11128:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[4] 0.000623462
-2 *11128:ZN 0.000623462
+1 io_out[4] 0.000486492
+2 *11128:ZN 0.000486492
 *RES
 1 *11128:ZN io_out[4] 9.135 
 *END
 
-*D_NET *110 0.0015227
+*D_NET *110 0.00118723
 *CONN
 *P io_out[5] O
 *I *11129:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[5] 0.000761351
-2 *11129:ZN 0.000761351
+1 io_out[5] 0.000593617
+2 *11129:ZN 0.000593617
 *RES
 1 *11129:ZN io_out[5] 10.215 
 *END
 
-*D_NET *111 0.000652498
+*D_NET *111 0.000481557
 *CONN
 *P io_out[6] O
 *I *11130:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[6] 0.000326249
-2 *11130:ZN 0.000326249
+1 io_out[6] 0.000240779
+2 *11130:ZN 0.000240779
 *RES
 1 *11130:ZN io_out[6] 11.475 
 *END
 
-*D_NET *112 0.000899727
+*D_NET *112 0.000677886
 *CONN
 *P io_out[7] O
 *I *11131:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[7] 0.000449863
-2 *11131:ZN 0.000449863
+1 io_out[7] 0.000338943
+2 *11131:ZN 0.000338943
 *RES
 1 *11131:ZN io_out[7] 12.195 
 *END
 
-*D_NET *113 0.00124692
+*D_NET *113 0.000972984
 *CONN
 *P io_out[8] O
 *I *11132:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[8] 0.000623462
-2 *11132:ZN 0.000623462
+1 io_out[8] 0.000486492
+2 *11132:ZN 0.000486492
 *RES
 1 *11132:ZN io_out[8] 9.135 
 *END
 
-*D_NET *114 0.00124692
+*D_NET *114 0.000972984
 *CONN
 *P io_out[9] O
 *I *11134:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 io_out[9] 0.000623462
-2 *11134:ZN 0.000623462
+1 io_out[9] 0.000486492
+2 *11134:ZN 0.000486492
 *RES
 1 *11134:ZN io_out[9] 9.135 
 *END
 
-*D_NET *179 0.00216276
+*D_NET *179 0.00204589
 *CONN
 *P la_data_out[0] O
 *I *11072:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[0] 0.00104114
-2 *11072:ZN 0.00104114
-3 io_oeb[32] la_data_out[0] 8.04696e-05
+1 la_data_out[0] 0.000964767
+2 *11072:ZN 0.000964767
+3 io_oeb[32] la_data_out[0] 0.000116358
 *RES
 1 *11072:ZN la_data_out[0] 20.698 
 *END
 
-*D_NET *180 0.000758959
+*D_NET *180 0.000566878
 *CONN
 *P la_data_out[10] O
 *I *11133:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[10] 0.00037948
-2 *11133:ZN 0.00037948
+1 la_data_out[10] 0.000283439
+2 *11133:ZN 0.000283439
 *RES
 1 *11133:ZN la_data_out[10] 11.655 
 *END
 
-*D_NET *181 0.000648189
+*D_NET *181 0.000564242
 *CONN
 *P la_data_out[11] O
 *I *11144:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[11] 0.000203112
-2 *11144:ZN 0.000203112
-3 la_data_out[11] wbs_dat_o[19] 0.000241965
+1 la_data_out[11] 0.000154673
+2 *11144:ZN 0.000154673
+3 la_data_out[11] wbs_dat_o[19] 0.000254896
 *RES
 1 *11144:ZN la_data_out[11] 11.115 
 *END
 
-*D_NET *182 0.000807801
+*D_NET *182 0.00060647
 *CONN
 *P la_data_out[12] O
 *I *11155:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[12] 0.0004039
-2 *11155:ZN 0.0004039
+1 la_data_out[12] 0.000303235
+2 *11155:ZN 0.000303235
 *RES
 1 *11155:ZN la_data_out[12] 11.835 
 *END
 
-*D_NET *183 0.00124692
+*D_NET *183 0.000972984
 *CONN
 *P la_data_out[13] O
 *I *10991:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[13] 0.000623462
-2 *10991:ZN 0.000623462
+1 la_data_out[13] 0.000486492
+2 *10991:ZN 0.000486492
 *RES
 1 *10991:ZN la_data_out[13] 9.135 
 *END
 
-*D_NET *184 0.000688361
+*D_NET *184 0.000510477
 *CONN
 *P la_data_out[14] O
 *I *11002:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[14] 0.000309386
-2 *11002:ZN 0.000309386
-3 io_oeb[37] la_data_out[14] 6.95892e-05
+1 la_data_out[14] 0.000220268
+2 *11002:ZN 0.000220268
+3 io_oeb[37] la_data_out[14] 6.9941e-05
 *RES
 1 *11002:ZN la_data_out[14] 11.655 
 *END
 
-*D_NET *185 0.000715875
+*D_NET *185 0.000535053
 *CONN
 *P la_data_out[15] O
 *I *11013:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[15] 0.000357937
-2 *11013:ZN 0.000357937
+1 la_data_out[15] 0.000267527
+2 *11013:ZN 0.000267527
 *RES
 1 *11013:ZN la_data_out[15] 11.475 
 *END
 
-*D_NET *186 0.000695583
+*D_NET *186 0.000513383
 *CONN
 *P la_data_out[16] O
 *I *11024:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[16] 0.000347791
-2 *11024:ZN 0.000347791
+1 la_data_out[16] 0.000256691
+2 *11024:ZN 0.000256691
 *RES
 1 *11024:ZN la_data_out[16] 11.655 
 *END
 
-*D_NET *187 0.0015227
+*D_NET *187 0.00118723
 *CONN
 *P la_data_out[17] O
 *I *11035:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[17] 0.000761351
-2 *11035:ZN 0.000761351
+1 la_data_out[17] 0.000593617
+2 *11035:ZN 0.000593617
 *RES
 1 *11035:ZN la_data_out[17] 10.215 
 *END
 
-*D_NET *188 0.000934645
+*D_NET *188 0.000714529
 *CONN
 *P la_data_out[18] O
 *I *11046:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[18] 0.000467322
-2 *11046:ZN 0.000467322
+1 la_data_out[18] 0.000357264
+2 *11046:ZN 0.000357264
 *RES
 1 *11046:ZN la_data_out[18] 12.195 
 *END
 
-*D_NET *189 0.00215887
+*D_NET *189 0.00268829
 *CONN
 *P la_data_out[19] O
 *I *11057:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[19] 0.000553318
-2 *11057:ZN 0.000553318
-3 la_data_out[19] la_data_out[25] 0.00105223
+1 la_data_out[19] 0.000427344
+2 *11057:ZN 0.000427344
+3 la_data_out[19] la_data_out[25] 0.0018336
 *RES
 1 *11057:ZN la_data_out[19] 18.9607 
 *END
 
-*D_NET *190 0.000948061
+*D_NET *190 0.000716695
 *CONN
 *P la_data_out[1] O
 *I *11073:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[1] 0.000440536
-2 *11073:ZN 0.000440536
-3 la_data_out[1] la_data_out[30] 6.69886e-05
+1 la_data_out[1] 0.000323377
+2 *11073:ZN 0.000323377
+3 la_data_out[1] la_data_out[30] 6.9941e-05
 *RES
 1 *11073:ZN la_data_out[1] 12.375 
 *END
 
-*D_NET *191 0.000850885
+*D_NET *191 0.000638295
 *CONN
 *P la_data_out[20] O
 *I *11068:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[20] 0.000425443
-2 *11068:ZN 0.000425443
+1 la_data_out[20] 0.000319147
+2 *11068:ZN 0.000319147
 *RES
 1 *11068:ZN la_data_out[20] 12.015 
 *END
 
-*D_NET *192 0.000631701
+*D_NET *192 0.000480232
 *CONN
 *P la_data_out[21] O
 *I *11076:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[21] 0.000288543
-2 *11076:ZN 0.000288543
-3 io_out[13] la_data_out[21] 5.46144e-05
+1 la_data_out[21] 0.000208254
+2 *11076:ZN 0.000208254
+3 io_out[13] la_data_out[21] 6.3724e-05
 *RES
 1 *11076:ZN la_data_out[21] 11.115 
 *END
 
-*D_NET *193 0.000485048
+*D_NET *193 0.00035832
 *CONN
 *P la_data_out[22] O
 *I *11077:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[22] 0.000242524
-2 *11077:ZN 0.000242524
+1 la_data_out[22] 0.00017916
+2 *11077:ZN 0.00017916
 *RES
 1 *11077:ZN la_data_out[22] 11.025 
 *END
 
-*D_NET *194 0.00125599
+*D_NET *194 0.000983945
 *CONN
 *P la_data_out[23] O
 *I *11079:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[23] 0.000568856
-2 *11079:ZN 0.000568856
-3 io_oeb[16] la_data_out[23] 0.000118278
+1 la_data_out[23] 0.000420623
+2 *11079:ZN 0.000420623
+3 io_oeb[16] la_data_out[23] 0.000142699
 *RES
 1 *11079:ZN la_data_out[23] 9.135 
 *END
 
-*D_NET *195 0.000715875
+*D_NET *195 0.000535053
 *CONN
 *P la_data_out[24] O
 *I *11080:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[24] 0.000357937
-2 *11080:ZN 0.000357937
+1 la_data_out[24] 0.000267527
+2 *11080:ZN 0.000267527
 *RES
 1 *11080:ZN la_data_out[24] 11.475 
 *END
 
-*D_NET *196 0.00207557
+*D_NET *196 0.00262613
 *CONN
 *P la_data_out[25] O
 *I *11081:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[25] 0.00051167
-2 *11081:ZN 0.00051167
-3 la_data_out[19] la_data_out[25] 0.00105223
+1 la_data_out[25] 0.000396266
+2 *11081:ZN 0.000396266
+3 la_data_out[19] la_data_out[25] 0.0018336
 *RES
 1 *11081:ZN la_data_out[25] 18.675 
 *END
 
-*D_NET *197 0.000899727
+*D_NET *197 0.000677886
 *CONN
 *P la_data_out[26] O
 *I *11082:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[26] 0.000449863
-2 *11082:ZN 0.000449863
+1 la_data_out[26] 0.000338943
+2 *11082:ZN 0.000338943
 *RES
 1 *11082:ZN la_data_out[26] 12.195 
 *END
 
-*D_NET *198 0.0015227
+*D_NET *198 0.00118723
 *CONN
 *P la_data_out[27] O
 *I *11083:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[27] 0.000761351
-2 *11083:ZN 0.000761351
+1 la_data_out[27] 0.000593617
+2 *11083:ZN 0.000593617
 *RES
 1 *11083:ZN la_data_out[27] 10.215 
 *END
 
-*D_NET *199 0.000942811
+*D_NET *199 0.000709711
 *CONN
 *P la_data_out[28] O
 *I *11084:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[28] 0.000471406
-2 *11084:ZN 0.000471406
+1 la_data_out[28] 0.000354856
+2 *11084:ZN 0.000354856
 *RES
 1 *11084:ZN la_data_out[28] 12.375 
 *END
 
-*D_NET *200 0.00124692
+*D_NET *200 0.000972984
 *CONN
 *P la_data_out[29] O
 *I *11085:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[29] 0.000623462
-2 *11085:ZN 0.000623462
+1 la_data_out[29] 0.000486492
+2 *11085:ZN 0.000486492
 *RES
 1 *11085:ZN la_data_out[29] 9.135 
 *END
 
-*D_NET *201 0.000715875
+*D_NET *201 0.000535053
 *CONN
 *P la_data_out[2] O
 *I *11074:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[2] 0.000357937
-2 *11074:ZN 0.000357937
+1 la_data_out[2] 0.000267527
+2 *11074:ZN 0.000267527
 *RES
 1 *11074:ZN la_data_out[2] 11.475 
 *END
 
-*D_NET *202 0.000764209
+*D_NET *202 0.000573862
 *CONN
 *P la_data_out[30] O
 *I *11086:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[30] 0.00034861
-2 *11086:ZN 0.00034861
-3 la_data_out[1] la_data_out[30] 6.69886e-05
+1 la_data_out[30] 0.00025196
+2 *11086:ZN 0.00025196
+3 la_data_out[1] la_data_out[30] 6.9941e-05
 *RES
 1 *11086:ZN la_data_out[30] 11.655 
 *END
 
-*D_NET *203 0.000673155
+*D_NET *203 0.000509251
 *CONN
 *P la_data_out[31] O
 *I *11087:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[31] 0.000336578
-2 *11087:ZN 0.000336578
+1 la_data_out[31] 0.000254626
+2 *11087:ZN 0.000254626
 *RES
 1 *11087:ZN la_data_out[31] 11.295 
 *END
 
-*D_NET *204 0.00154457
+*D_NET *204 0.00119495
 *CONN
 *P la_data_out[32] O
 *I *11088:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[32] 0.000772286
-2 *11088:ZN 0.000772286
+1 la_data_out[32] 0.000597474
+2 *11088:ZN 0.000597474
 *RES
 1 *11088:ZN la_data_out[32] 10.215 
 *END
 
-*D_NET *205 0.000850885
+*D_NET *205 0.000638295
 *CONN
 *P la_data_out[33] O
 *I *11090:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[33] 0.000425443
-2 *11090:ZN 0.000425443
+1 la_data_out[33] 0.000319147
+2 *11090:ZN 0.000319147
 *RES
 1 *11090:ZN la_data_out[33] 12.015 
 *END
 
-*D_NET *206 0.00124692
+*D_NET *206 0.000972984
 *CONN
 *P la_data_out[34] O
 *I *11091:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[34] 0.000623462
-2 *11091:ZN 0.000623462
+1 la_data_out[34] 0.000486492
+2 *11091:ZN 0.000486492
 *RES
 1 *11091:ZN la_data_out[34] 9.135 
 *END
 
-*D_NET *207 0.0015227
+*D_NET *207 0.00118723
 *CONN
 *P la_data_out[35] O
 *I *11092:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[35] 0.000761351
-2 *11092:ZN 0.000761351
+1 la_data_out[35] 0.000593617
+2 *11092:ZN 0.000593617
 *RES
 1 *11092:ZN la_data_out[35] 10.215 
 *END
 
-*D_NET *208 0.000485048
+*D_NET *208 0.00035832
 *CONN
 *P la_data_out[36] O
 *I *11093:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[36] 0.000242524
-2 *11093:ZN 0.000242524
+1 la_data_out[36] 0.00017916
+2 *11093:ZN 0.00017916
 *RES
 1 *11093:ZN la_data_out[36] 11.025 
 *END
 
-*D_NET *209 0.000942811
+*D_NET *209 0.000709711
 *CONN
 *P la_data_out[37] O
 *I *11094:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[37] 0.000471406
-2 *11094:ZN 0.000471406
+1 la_data_out[37] 0.000354856
+2 *11094:ZN 0.000354856
 *RES
 1 *11094:ZN la_data_out[37] 12.375 
 *END
 
-*D_NET *210 0.000888682
+*D_NET *210 0.00067882
 *CONN
 *P la_data_out[38] O
 *I *11095:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[38] 0.000444341
-2 *11095:ZN 0.000444341
+1 la_data_out[38] 0.00033941
+2 *11095:ZN 0.00033941
 *RES
 1 *11095:ZN la_data_out[38] 12.015 
 *END
 
-*D_NET *211 0.000758959
+*D_NET *211 0.000566878
 *CONN
 *P la_data_out[39] O
 *I *11096:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[39] 0.00037948
-2 *11096:ZN 0.00037948
+1 la_data_out[39] 0.000283439
+2 *11096:ZN 0.000283439
 *RES
 1 *11096:ZN la_data_out[39] 11.655 
 *END
 
-*D_NET *212 0.000899727
+*D_NET *212 0.000677886
 *CONN
 *P la_data_out[3] O
 *I *11075:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[3] 0.000449863
-2 *11075:ZN 0.000449863
+1 la_data_out[3] 0.000338943
+2 *11075:ZN 0.000338943
 *RES
 1 *11075:ZN la_data_out[3] 12.195 
 *END
 
-*D_NET *213 0.000677894
+*D_NET *213 0.000508054
 *CONN
 *P la_data_out[40] O
 *I *11097:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[40] 0.000294854
-2 *11097:ZN 0.000294854
-3 io_out[18] la_data_out[40] 8.81855e-05
+1 la_data_out[40] 0.000208316
+2 *11097:ZN 0.000208316
+3 io_out[18] la_data_out[40] 9.14225e-05
 *RES
 1 *11097:ZN la_data_out[40] 11.655 
 *END
 
-*D_NET *214 0.000673155
+*D_NET *214 0.000509251
 *CONN
 *P la_data_out[41] O
 *I *11098:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[41] 0.000336578
-2 *11098:ZN 0.000336578
+1 la_data_out[41] 0.000254626
+2 *11098:ZN 0.000254626
 *RES
 1 *11098:ZN la_data_out[41] 11.295 
 *END
 
-*D_NET *215 0.000485048
+*D_NET *215 0.00035832
 *CONN
 *P la_data_out[42] O
 *I *11099:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[42] 0.000242524
-2 *11099:ZN 0.000242524
+1 la_data_out[42] 0.00017916
+2 *11099:ZN 0.00017916
 *RES
 1 *11099:ZN la_data_out[42] 11.025 
 *END
 
-*D_NET *216 0.00125599
+*D_NET *216 0.000983945
 *CONN
 *P la_data_out[43] O
 *I *11101:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[43] 0.000568856
-2 *11101:ZN 0.000568856
-3 io_out[1] la_data_out[43] 0.000118278
+1 la_data_out[43] 0.000420623
+2 *11101:ZN 0.000420623
+3 io_out[1] la_data_out[43] 0.000142699
 *RES
 1 *11101:ZN la_data_out[43] 9.135 
 *END
 
-*D_NET *217 0.00130195
+*D_NET *217 0.00101965
 *CONN
 *P la_data_out[44] O
 *I *11102:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[44] 0.000591837
-2 *11102:ZN 0.000591837
-3 io_out[15] la_data_out[44] 0.000118278
+1 la_data_out[44] 0.000438477
+2 *11102:ZN 0.000438477
+3 io_out[15] la_data_out[44] 0.000142699
 *RES
 1 *11102:ZN la_data_out[44] 9.315 
 *END
 
-*D_NET *218 0.0015227
+*D_NET *218 0.00118723
 *CONN
 *P la_data_out[45] O
 *I *11103:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[45] 0.000761351
-2 *11103:ZN 0.000761351
+1 la_data_out[45] 0.000593617
+2 *11103:ZN 0.000593617
 *RES
 1 *11103:ZN la_data_out[45] 10.215 
 *END
 
-*D_NET *219 0.0015227
+*D_NET *219 0.00118723
 *CONN
 *P la_data_out[46] O
 *I *11104:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[46] 0.000761351
-2 *11104:ZN 0.000761351
+1 la_data_out[46] 0.000593617
+2 *11104:ZN 0.000593617
 *RES
 1 *11104:ZN la_data_out[46] 10.215 
 *END
 
-*D_NET *220 0.000715875
+*D_NET *220 0.000535053
 *CONN
 *P la_data_out[47] O
 *I *11105:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[47] 0.000357937
-2 *11105:ZN 0.000357937
+1 la_data_out[47] 0.000267527
+2 *11105:ZN 0.000267527
 *RES
 1 *11105:ZN la_data_out[47] 11.475 
 *END
 
-*D_NET *221 0.00125599
+*D_NET *221 0.000983945
 *CONN
 *P la_data_out[48] O
 *I *11106:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[48] 0.000568856
-2 *11106:ZN 0.000568856
-3 io_out[36] la_data_out[48] 0.000118278
+1 la_data_out[48] 0.000420623
+2 *11106:ZN 0.000420623
+3 io_out[36] la_data_out[48] 0.000142699
 *RES
 1 *11106:ZN la_data_out[48] 9.135 
 *END
 
-*D_NET *222 0.00124692
+*D_NET *222 0.000972984
 *CONN
 *P la_data_out[49] O
 *I *11107:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[49] 0.000623462
-2 *11107:ZN 0.000623462
+1 la_data_out[49] 0.000486492
+2 *11107:ZN 0.000486492
 *RES
 1 *11107:ZN la_data_out[49] 9.135 
 *END
 
-*D_NET *223 0.0015227
+*D_NET *223 0.00118723
 *CONN
 *P la_data_out[4] O
 *I *10990:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[4] 0.000761351
-2 *10990:ZN 0.000761351
+1 la_data_out[4] 0.000593617
+2 *10990:ZN 0.000593617
 *RES
 1 *10990:ZN la_data_out[4] 10.215 
 *END
 
-*D_NET *224 0.00141943
+*D_NET *224 0.00111226
 *CONN
 *P la_data_out[50] O
 *I *11108:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[50] 0.000634638
-2 *11108:ZN 0.000634638
-3 io_oeb[19] la_data_out[50] 0.000150157
+1 la_data_out[50] 0.000466368
+2 *11108:ZN 0.000466368
+3 io_oeb[19] la_data_out[50] 0.000179524
 *RES
 1 *11108:ZN la_data_out[50] 9.765 
 *END
 
-*D_NET *225 0.000843699
+*D_NET *225 0.0006454
 *CONN
 *P la_data_out[51] O
 *I *11109:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[51] 0.000421849
-2 *11109:ZN 0.000421849
+1 la_data_out[51] 0.0003227
+2 *11109:ZN 0.0003227
 *RES
 1 *11109:ZN la_data_out[51] 11.835 
 *END
 
-*D_NET *226 0.000942811
+*D_NET *226 0.000709711
 *CONN
 *P la_data_out[52] O
 *I *11110:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[52] 0.000471406
-2 *11110:ZN 0.000471406
+1 la_data_out[52] 0.000354856
+2 *11110:ZN 0.000354856
 *RES
 1 *11110:ZN la_data_out[52] 12.375 
 *END
 
-*D_NET *227 0.000652498
+*D_NET *227 0.000481557
 *CONN
 *P la_data_out[53] O
 *I *11112:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[53] 0.000326249
-2 *11112:ZN 0.000326249
+1 la_data_out[53] 0.000240779
+2 *11112:ZN 0.000240779
 *RES
 1 *11112:ZN la_data_out[53] 11.475 
 *END
 
-*D_NET *228 0.000758959
+*D_NET *228 0.000566878
 *CONN
 *P la_data_out[54] O
 *I *11113:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[54] 0.00037948
-2 *11113:ZN 0.00037948
+1 la_data_out[54] 0.000283439
+2 *11113:ZN 0.000283439
 *RES
 1 *11113:ZN la_data_out[54] 11.655 
 *END
 
-*D_NET *229 0.0015227
+*D_NET *229 0.00118723
 *CONN
 *P la_data_out[55] O
 *I *11114:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[55] 0.000761351
-2 *11114:ZN 0.000761351
+1 la_data_out[55] 0.000593617
+2 *11114:ZN 0.000593617
 *RES
 1 *11114:ZN la_data_out[55] 10.215 
 *END
 
-*D_NET *230 0.000888682
+*D_NET *230 0.00067882
 *CONN
 *P la_data_out[56] O
 *I *11115:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[56] 0.000444341
-2 *11115:ZN 0.000444341
+1 la_data_out[56] 0.00033941
+2 *11115:ZN 0.00033941
 *RES
 1 *11115:ZN la_data_out[56] 12.015 
 *END
 
-*D_NET *231 0.0015227
+*D_NET *231 0.00118723
 *CONN
 *P la_data_out[57] O
 *I *11116:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[57] 0.000761351
-2 *11116:ZN 0.000761351
+1 la_data_out[57] 0.000593617
+2 *11116:ZN 0.000593617
 *RES
 1 *11116:ZN la_data_out[57] 10.215 
 *END
 
-*D_NET *232 0.000850885
+*D_NET *232 0.000638295
 *CONN
 *P la_data_out[58] O
 *I *11117:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[58] 0.000425443
-2 *11117:ZN 0.000425443
+1 la_data_out[58] 0.000319147
+2 *11117:ZN 0.000319147
 *RES
 1 *11117:ZN la_data_out[58] 12.015 
 *END
 
-*D_NET *233 0.000899727
+*D_NET *233 0.000677886
 *CONN
 *P la_data_out[59] O
 *I *11118:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[59] 0.000449863
-2 *11118:ZN 0.000449863
+1 la_data_out[59] 0.000338943
+2 *11118:ZN 0.000338943
 *RES
 1 *11118:ZN la_data_out[59] 12.195 
 *END
 
-*D_NET *234 0.000695583
+*D_NET *234 0.000513383
 *CONN
 *P la_data_out[5] O
 *I *11078:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[5] 0.000347791
-2 *11078:ZN 0.000347791
+1 la_data_out[5] 0.000256691
+2 *11078:ZN 0.000256691
 *RES
 1 *11078:ZN la_data_out[5] 11.655 
 *END
 
-*D_NET *235 0.00165148
+*D_NET *235 0.00127137
 *CONN
 *P la_data_out[60] O
 *I *11119:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[60] 0.000825739
-2 *11119:ZN 0.000825739
+1 la_data_out[60] 0.000635687
+2 *11119:ZN 0.000635687
 *RES
 1 *11119:ZN la_data_out[60] 19.575 
 *END
 
-*D_NET *236 0.00124692
+*D_NET *236 0.000972984
 *CONN
 *P la_data_out[61] O
 *I *11120:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[61] 0.000623462
-2 *11120:ZN 0.000623462
+1 la_data_out[61] 0.000486492
+2 *11120:ZN 0.000486492
 *RES
 1 *11120:ZN la_data_out[61] 9.135 
 *END
 
-*D_NET *237 0.00156127
+*D_NET *237 0.00120626
 *CONN
 *P la_data_out[62] O
 *I *11121:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[62] 0.000780633
-2 *11121:ZN 0.000780633
+1 la_data_out[62] 0.000603129
+2 *11121:ZN 0.000603129
 3 io_out[24] la_data_out[62] 0
 *RES
 1 *11121:ZN la_data_out[62] 19.1798 
 *END
 
-*D_NET *238 0.000485048
+*D_NET *238 0.00035832
 *CONN
 *P la_data_out[63] O
 *I *11123:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[63] 0.000242524
-2 *11123:ZN 0.000242524
+1 la_data_out[63] 0.00017916
+2 *11123:ZN 0.00017916
 *RES
 1 *11123:ZN la_data_out[63] 11.025 
 *END
 
-*D_NET *239 0.000850885
+*D_NET *239 0.000638295
 *CONN
 *P la_data_out[6] O
 *I *11089:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[6] 0.000425443
-2 *11089:ZN 0.000425443
+1 la_data_out[6] 0.000319147
+2 *11089:ZN 0.000319147
 *RES
 1 *11089:ZN la_data_out[6] 12.015 
 *END
 
-*D_NET *240 0.00196319
+*D_NET *240 0.00152889
 *CONN
 *P la_data_out[7] O
 *I *11100:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[7] 0.000981596
-2 *11100:ZN 0.000981596
+1 la_data_out[7] 0.000764446
+2 *11100:ZN 0.000764446
 3 io_oeb[23] la_data_out[7] 0
 *RES
 1 *11100:ZN la_data_out[7] 12.465 
 *END
 
-*D_NET *241 0.000807801
+*D_NET *241 0.00060647
 *CONN
 *P la_data_out[8] O
 *I *11111:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[8] 0.0004039
-2 *11111:ZN 0.0004039
+1 la_data_out[8] 0.000303235
+2 *11111:ZN 0.000303235
 *RES
 1 *11111:ZN la_data_out[8] 11.835 
 *END
 
-*D_NET *242 0.000485048
+*D_NET *242 0.00035832
 *CONN
 *P la_data_out[9] O
 *I *11122:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 la_data_out[9] 0.000242524
-2 *11122:ZN 0.000242524
+1 la_data_out[9] 0.00017916
+2 *11122:ZN 0.00017916
 *RES
 1 *11122:ZN la_data_out[9] 11.025 
 *END
 
-*D_NET *308 0.000850885
+*D_NET *308 0.000638295
 *CONN
 *P user_irq[0] O
 *I *11032:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 user_irq[0] 0.000425443
-2 *11032:ZN 0.000425443
+1 user_irq[0] 0.000319147
+2 *11032:ZN 0.000319147
 *RES
 1 *11032:ZN user_irq[0] 12.015 
 *END
 
-*D_NET *309 0.0015227
+*D_NET *309 0.00118723
 *CONN
 *P user_irq[1] O
 *I *11033:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 user_irq[1] 0.000761351
-2 *11033:ZN 0.000761351
+1 user_irq[1] 0.000593617
+2 *11033:ZN 0.000593617
 *RES
 1 *11033:ZN user_irq[1] 10.215 
 *END
 
-*D_NET *310 0.000812548
+*D_NET *310 0.000612762
 *CONN
 *P user_irq[2] O
 *I *11034:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 user_irq[2] 0.000375874
-2 *11034:ZN 0.000375874
-3 user_irq[2] wbs_dat_o[30] 6.07998e-05
+1 user_irq[2] 0.000274519
+2 *11034:ZN 0.000274519
+3 user_irq[2] wbs_dat_o[30] 6.3724e-05
 *RES
 1 *11034:ZN user_irq[2] 11.835 
 *END
 
-*D_NET *315 0.000892669
+*D_NET *315 0.000683847
 *CONN
 *P wbs_ack_o O
 *I *11036:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_ack_o 0.000416041
-2 *11036:ZN 0.000416041
-3 io_out[2] wbs_ack_o 6.05871e-05
+1 wbs_ack_o 0.000306953
+2 *11036:ZN 0.000306953
+3 io_out[2] wbs_ack_o 6.9941e-05
 *RES
 1 *11036:ZN wbs_ack_o 12.015 
 *END
 
-*D_NET *381 0.000899727
+*D_NET *381 0.000677886
 *CONN
 *P wbs_dat_o[0] O
 *I *11037:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[0] 0.000449863
-2 *11037:ZN 0.000449863
+1 wbs_dat_o[0] 0.000338943
+2 *11037:ZN 0.000338943
 *RES
 1 *11037:ZN wbs_dat_o[0] 12.195 
 *END
 
-*D_NET *382 0.000942811
+*D_NET *382 0.000709711
 *CONN
 *P wbs_dat_o[10] O
 *I *11048:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[10] 0.000471406
-2 *11048:ZN 0.000471406
+1 wbs_dat_o[10] 0.000354856
+2 *11048:ZN 0.000354856
 *RES
 1 *11048:ZN wbs_dat_o[10] 12.375 
 *END
 
-*D_NET *383 0.00124692
+*D_NET *383 0.000972984
 *CONN
 *P wbs_dat_o[11] O
 *I *11049:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[11] 0.000623462
-2 *11049:ZN 0.000623462
+1 wbs_dat_o[11] 0.000486492
+2 *11049:ZN 0.000486492
 *RES
 1 *11049:ZN wbs_dat_o[11] 9.135 
 *END
 
-*D_NET *384 0.000695583
+*D_NET *384 0.000513383
 *CONN
 *P wbs_dat_o[12] O
 *I *11050:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[12] 0.000347791
-2 *11050:ZN 0.000347791
+1 wbs_dat_o[12] 0.000256691
+2 *11050:ZN 0.000256691
 *RES
 1 *11050:ZN wbs_dat_o[12] 11.655 
 *END
 
-*D_NET *385 0.0015227
+*D_NET *385 0.00118723
 *CONN
 *P wbs_dat_o[13] O
 *I *11051:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[13] 0.000761351
-2 *11051:ZN 0.000761351
+1 wbs_dat_o[13] 0.000593617
+2 *11051:ZN 0.000593617
 *RES
 1 *11051:ZN wbs_dat_o[13] 10.215 
 *END
 
-*D_NET *386 0.000695583
+*D_NET *386 0.000513383
 *CONN
 *P wbs_dat_o[14] O
 *I *11052:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[14] 0.000347791
-2 *11052:ZN 0.000347791
+1 wbs_dat_o[14] 0.000256691
+2 *11052:ZN 0.000256691
 *RES
 1 *11052:ZN wbs_dat_o[14] 11.655 
 *END
 
-*D_NET *387 0.0015227
+*D_NET *387 0.00118723
 *CONN
 *P wbs_dat_o[15] O
 *I *11053:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[15] 0.000761351
-2 *11053:ZN 0.000761351
+1 wbs_dat_o[15] 0.000593617
+2 *11053:ZN 0.000593617
 *RES
 1 *11053:ZN wbs_dat_o[15] 10.215 
 *END
 
-*D_NET *388 0.000807801
+*D_NET *388 0.00060647
 *CONN
 *P wbs_dat_o[16] O
 *I *11054:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[16] 0.0004039
-2 *11054:ZN 0.0004039
+1 wbs_dat_o[16] 0.000303235
+2 *11054:ZN 0.000303235
 *RES
 1 *11054:ZN wbs_dat_o[16] 11.835 
 *END
 
-*D_NET *389 0.000807801
+*D_NET *389 0.00060647
 *CONN
 *P wbs_dat_o[17] O
 *I *11055:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[17] 0.0004039
-2 *11055:ZN 0.0004039
+1 wbs_dat_o[17] 0.000303235
+2 *11055:ZN 0.000303235
 *RES
 1 *11055:ZN wbs_dat_o[17] 11.835 
 *END
 
-*D_NET *390 0.00124692
+*D_NET *390 0.000972984
 *CONN
 *P wbs_dat_o[18] O
 *I *11056:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[18] 0.000623462
-2 *11056:ZN 0.000623462
+1 wbs_dat_o[18] 0.000486492
+2 *11056:ZN 0.000486492
 *RES
 1 *11056:ZN wbs_dat_o[18] 9.135 
 *END
 
-*D_NET *391 0.00234943
+*D_NET *391 0.00186485
 *CONN
 *P wbs_dat_o[19] O
 *I *11058:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[19] 0.00105373
-2 *11058:ZN 0.00105373
-3 la_data_out[11] wbs_dat_o[19] 0.000241965
+1 wbs_dat_o[19] 0.000804977
+2 *11058:ZN 0.000804977
+3 la_data_out[11] wbs_dat_o[19] 0.000254896
 *RES
 1 *11058:ZN wbs_dat_o[19] 22.455 
 *END
 
-*D_NET *392 0.00124692
+*D_NET *392 0.000972984
 *CONN
 *P wbs_dat_o[1] O
 *I *11038:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[1] 0.000623462
-2 *11038:ZN 0.000623462
+1 wbs_dat_o[1] 0.000486492
+2 *11038:ZN 0.000486492
 *RES
 1 *11038:ZN wbs_dat_o[1] 9.135 
 *END
 
-*D_NET *393 0.000628172
+*D_NET *393 0.000475831
 *CONN
 *P wbs_dat_o[20] O
 *I *11059:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[20] 0.000314086
-2 *11059:ZN 0.000314086
+1 wbs_dat_o[20] 0.000237916
+2 *11059:ZN 0.000237916
 *RES
 1 *11059:ZN wbs_dat_o[20] 11.115 
 *END
 
-*D_NET *394 0.000807801
+*D_NET *394 0.00060647
 *CONN
 *P wbs_dat_o[21] O
 *I *11060:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[21] 0.0004039
-2 *11060:ZN 0.0004039
+1 wbs_dat_o[21] 0.000303235
+2 *11060:ZN 0.000303235
 *RES
 1 *11060:ZN wbs_dat_o[21] 11.835 
 *END
 
-*D_NET *395 0.0015227
+*D_NET *395 0.00118723
 *CONN
 *P wbs_dat_o[22] O
 *I *11061:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[22] 0.000761351
-2 *11061:ZN 0.000761351
+1 wbs_dat_o[22] 0.000593617
+2 *11061:ZN 0.000593617
 *RES
 1 *11061:ZN wbs_dat_o[22] 10.215 
 *END
 
-*D_NET *396 0.000652498
+*D_NET *396 0.000481557
 *CONN
 *P wbs_dat_o[23] O
 *I *11062:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[23] 0.000326249
-2 *11062:ZN 0.000326249
+1 wbs_dat_o[23] 0.000240779
+2 *11062:ZN 0.000240779
 *RES
 1 *11062:ZN wbs_dat_o[23] 11.475 
 *END
 
-*D_NET *397 0.00124692
+*D_NET *397 0.000972984
 *CONN
 *P wbs_dat_o[24] O
 *I *11063:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[24] 0.000623462
-2 *11063:ZN 0.000623462
+1 wbs_dat_o[24] 0.000486492
+2 *11063:ZN 0.000486492
 *RES
 1 *11063:ZN wbs_dat_o[24] 9.135 
 *END
 
-*D_NET *398 0.00124692
+*D_NET *398 0.000972984
 *CONN
 *P wbs_dat_o[25] O
 *I *11064:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[25] 0.000623462
-2 *11064:ZN 0.000623462
+1 wbs_dat_o[25] 0.000486492
+2 *11064:ZN 0.000486492
 *RES
 1 *11064:ZN wbs_dat_o[25] 9.135 
 *END
 
-*D_NET *399 0.0015227
+*D_NET *399 0.00118723
 *CONN
 *P wbs_dat_o[26] O
 *I *11065:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[26] 0.000761351
-2 *11065:ZN 0.000761351
+1 wbs_dat_o[26] 0.000593617
+2 *11065:ZN 0.000593617
 *RES
 1 *11065:ZN wbs_dat_o[26] 10.215 
 *END
 
-*D_NET *400 0.0015227
+*D_NET *400 0.00118723
 *CONN
 *P wbs_dat_o[27] O
 *I *11066:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[27] 0.000761351
-2 *11066:ZN 0.000761351
+1 wbs_dat_o[27] 0.000593617
+2 *11066:ZN 0.000593617
 *RES
 1 *11066:ZN wbs_dat_o[27] 10.215 
 *END
 
-*D_NET *401 0.00124692
+*D_NET *401 0.000972984
 *CONN
 *P wbs_dat_o[28] O
 *I *11067:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[28] 0.000623462
-2 *11067:ZN 0.000623462
+1 wbs_dat_o[28] 0.000486492
+2 *11067:ZN 0.000486492
 *RES
 1 *11067:ZN wbs_dat_o[28] 9.135 
 *END
 
-*D_NET *402 0.0015227
+*D_NET *402 0.00118723
 *CONN
 *P wbs_dat_o[29] O
 *I *11069:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[29] 0.000761351
-2 *11069:ZN 0.000761351
+1 wbs_dat_o[29] 0.000593617
+2 *11069:ZN 0.000593617
 *RES
 1 *11069:ZN wbs_dat_o[29] 10.215 
 *END
 
-*D_NET *403 0.000758959
+*D_NET *403 0.000566878
 *CONN
 *P wbs_dat_o[2] O
 *I *11039:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[2] 0.00037948
-2 *11039:ZN 0.00037948
+1 wbs_dat_o[2] 0.000283439
+2 *11039:ZN 0.000283439
 *RES
 1 *11039:ZN wbs_dat_o[2] 11.655 
 *END
 
-*D_NET *404 0.000718252
+*D_NET *404 0.000534551
 *CONN
 *P wbs_dat_o[30] O
 *I *11070:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[30] 0.000328726
-2 *11070:ZN 0.000328726
-3 user_irq[2] wbs_dat_o[30] 6.07998e-05
+1 wbs_dat_o[30] 0.000235414
+2 *11070:ZN 0.000235414
+3 user_irq[2] wbs_dat_o[30] 6.3724e-05
 *RES
 1 *11070:ZN wbs_dat_o[30] 11.925 
 *END
 
-*D_NET *405 0.000695583
+*D_NET *405 0.000513383
 *CONN
 *P wbs_dat_o[31] O
 *I *11071:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[31] 0.000347791
-2 *11071:ZN 0.000347791
+1 wbs_dat_o[31] 0.000256691
+2 *11071:ZN 0.000256691
 *RES
 1 *11071:ZN wbs_dat_o[31] 11.655 
 *END
 
-*D_NET *406 0.00120096
+*D_NET *406 0.000937276
 *CONN
 *P wbs_dat_o[3] O
 *I *11040:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[3] 0.000600481
-2 *11040:ZN 0.000600481
+1 wbs_dat_o[3] 0.000468638
+2 *11040:ZN 0.000468638
 *RES
 1 *11040:ZN wbs_dat_o[3] 8.955 
 *END
 
-*D_NET *407 0.00124692
+*D_NET *407 0.000972984
 *CONN
 *P wbs_dat_o[4] O
 *I *11041:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[4] 0.000623462
-2 *11041:ZN 0.000623462
+1 wbs_dat_o[4] 0.000486492
+2 *11041:ZN 0.000486492
 *RES
 1 *11041:ZN wbs_dat_o[4] 9.135 
 *END
 
-*D_NET *408 0.000715875
+*D_NET *408 0.000535053
 *CONN
 *P wbs_dat_o[5] O
 *I *11042:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[5] 0.000357937
-2 *11042:ZN 0.000357937
+1 wbs_dat_o[5] 0.000267527
+2 *11042:ZN 0.000267527
 *RES
 1 *11042:ZN wbs_dat_o[5] 11.475 
 *END
 
-*D_NET *409 0.000695583
+*D_NET *409 0.000513383
 *CONN
 *P wbs_dat_o[6] O
 *I *11043:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[6] 0.000347791
-2 *11043:ZN 0.000347791
+1 wbs_dat_o[6] 0.000256691
+2 *11043:ZN 0.000256691
 *RES
 1 *11043:ZN wbs_dat_o[6] 11.655 
 *END
 
-*D_NET *410 0.00124692
+*D_NET *410 0.000972984
 *CONN
 *P wbs_dat_o[7] O
 *I *11044:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[7] 0.000623462
-2 *11044:ZN 0.000623462
+1 wbs_dat_o[7] 0.000486492
+2 *11044:ZN 0.000486492
 *RES
 1 *11044:ZN wbs_dat_o[7] 9.135 
 *END
 
-*D_NET *411 0.00186673
+*D_NET *411 0.00144056
 *CONN
 *P wbs_dat_o[8] O
 *I *11045:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[8] 0.000858284
-2 *11045:ZN 0.000858284
-3 wbs_dat_o[8] wbs_dat_o[9] 0.000150157
+1 wbs_dat_o[8] 0.000630516
+2 *11045:ZN 0.000630516
+3 wbs_dat_o[8] wbs_dat_o[9] 0.000179524
 *RES
 1 *11045:ZN wbs_dat_o[8] 20.475 
 *END
 
-*D_NET *412 0.00153434
+*D_NET *412 0.00120153
 *CONN
 *P wbs_dat_o[9] O
 *I *11047:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
 *CAP
-1 wbs_dat_o[9] 0.000692092
-2 *11047:ZN 0.000692092
-3 wbs_dat_o[8] wbs_dat_o[9] 0.000150157
+1 wbs_dat_o[9] 0.000511003
+2 *11047:ZN 0.000511003
+3 wbs_dat_o[8] wbs_dat_o[9] 0.000179524
 *RES
 1 *11047:ZN wbs_dat_o[9] 10.215 
 *END
