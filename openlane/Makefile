@@ -28,6 +28,7 @@ openlane_cmd = \
 	-save \
 	-tag $(OPENLANE_RUN_TAG) \
 	-overwrite \
+	-verbose 99 \
 	-ignore_mismatches"
 openlane_cmd_interactive = "flow.tcl -it -file $$(realpath ./$*/interactive.tcl)"
 
