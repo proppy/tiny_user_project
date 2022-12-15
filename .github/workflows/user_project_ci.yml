@@ -153,9 +153,62 @@ jobs:
           openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
+  precheck:
+    needs:
+    - gds
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: restore setup
+      uses: actions/cache@v3
+      with:
+        path: |
+          ${{ env.PDK_ROOT }}
+          ${{ env.OPENLANE_ROOT }}
+          caravel/
+          mgmt_core_wrapper/
+          openlane.tar
+        key: ${{ runner.os }}-setup-${{ env.SETUP_TAG }}
+
+    - name: setup
+      run: |
+        make precheck
+
+    - name: restore gds cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          def/
+          gds/
+          lef/
+          mag/
+          maglef/
+          sdc/
+          sdf/
+          signoff/
+          spef/
+          spi/
+          verilog/
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
+        key: ${{ runner.os }}-gds-${{ github.run_id }}
+
+    - name: check
+      run: |
+        make run-precheck
+
+    - name: summary
+      run: |
+        cat << EOF >> $GITHUB_STEP_SUMMARY
+        \`\`\`
+        `cat precheck_results/*/logs/precheck.log`
+        \`\`\`
+        EOF
+
   commit:
     if: github.ref_name == 'main'
     needs:
+    - precheck
     - gds
     runs-on: ubuntu-latest
     steps:
