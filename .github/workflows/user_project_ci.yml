@@ -15,9 +15,8 @@ permissions:
 env:
   PDK_ROOT: '/home/runner/work/pdk'
   OPENLANE_ROOT: '/home/runner/work/openlane'
-  PDK: 'gf180mcuC'
-  PDK_TECH: 'gf180mcu'
-  SETUP_CACHE_KEY: 'gfmpw-0d'
+  PDK: 'sky130A'
+  SETUP_CACHE_KEY: 'mpw-8c'
 
 concurrency: ${{ github.workflow }}-${{ github.ref_name }}
 
@@ -25,6 +24,13 @@ jobs:
   gds:
     runs-on: ubuntu-latest
     steps:
+    - name: maximize build space
+      uses: easimon/maximize-build-space@master
+      with:
+        root-reserve-mb: 8096
+        swap-size-mb: 8096
+        remove-dotnet: 'true'
+
     - uses: actions/checkout@v3
 
     - name: cache setup
@@ -147,9 +153,62 @@ jobs:
           openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
         key: ${{ runner.os }}-gds-${{ github.run_id }}
 
+  precheck:
+    needs:
+    - gds
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: restore setup
+      uses: actions/cache@v3
+      with:
+        path: |
+          ${{ env.PDK_ROOT }}
+          ${{ env.OPENLANE_ROOT }}
+          caravel/
+          mgmt_core_wrapper/
+          openlane.tar
+        key: ${{ runner.os }}-setup-${{ env.SETUP_TAG }}
+
+    - name: setup
+      run: |
+        make precheck
+
+    - name: restore gds cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          def/
+          gds/
+          lef/
+          mag/
+          maglef/
+          sdc/
+          sdf/
+          signoff/
+          spef/
+          spi/
+          verilog/
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
+        key: ${{ runner.os }}-gds-${{ github.run_id }}
+
+    - name: check
+      run: |
+        make run-precheck
+
+    - name: summary
+      run: |
+        cat << EOF >> $GITHUB_STEP_SUMMARY
+        \`\`\`
+        `cat precheck_results/*/logs/precheck.log`
+        \`\`\`
+        EOF
+
   commit:
     if: github.ref_name == 'main'
     needs:
+    - precheck
     - gds
     runs-on: ubuntu-latest
     steps:
@@ -182,7 +241,7 @@ jobs:
         git commit -m "harden project [skip ci]"
         git push origin main
 
-  layout:
+  img:
     needs: gds
     runs-on: ubuntu-latest
     steps:
@@ -235,10 +294,55 @@ jobs:
           tiny_user_project_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
 
+  view:
+    needs: gds
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout GDS2glTF repo
+      uses: actions/checkout@v3
+      with:
+        repository: mbalestrini/GDS2glTF
+
+    - name: setup python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: restore gds cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          def/
+          gds/
+          lef/
+          mag/
+          maglef/
+          sdc/
+          sdf/
+          signoff/
+          spef/
+          spi/
+          verilog/
+          openlane/tiny_user_project/runs/tiny_user_project/tmp/synthesis/post_techmap.dot
+        key: ${{ runner.os }}-gds-${{ github.run_id }}
+
+    - name: gds2gltf
+      run: |
+        python -m pip install numpy gdspy triangle pygltflib
+        python3 gds2gltf.py gds/tiny_user_project.gds
+        mv gds/tiny_user_project.gds.gltf tiny_user_project_view.gltf
+    - name: populate view cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          tiny_user_project_view.gltf
+        key: ${{ runner.os }}-view-${{ github.run_id }}  
+
   pages:
     if: github.ref_name == 'main'
     needs:
-    - layout
+    - img
+    - view
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -253,6 +357,30 @@ jobs:
           tiny_user_project_synth.png
           tiny_user_project_layout.png
         key: ${{ runner.os }}-img-${{ github.run_id }}
+    - name: restore view cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          tiny_user_project_view.gltf
+        key: ${{ runner.os }}-view-${{ github.run_id }}
+    - name: generate redirect to viewer
+      run: |
+        cat << EOF >> index.html
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Redirecting to GDS Viewer...</title>
+          </head>
+          <body>
+            <script>
+              location.href = "https://gds-viewer.tinytapeout.com/?model=" + encodeURIComponent(location.href + '/tiny_user_project_view.gltf');
+            </script>
+          </body>
+          </html>
+        EOF        
     - name: setup pages
       uses: actions/configure-pages@v2
     - name: upload artifact
@@ -276,4 +404,6 @@ jobs:
         ![synth]($PAGE_URL/tiny_user_project_synth.png)
         # layout
         ![layout]($PAGE_URL/tiny_user_project_layout.png)
+        # viewer
+        [viewer](https://gds-viewer.tinytapeout.com/?model=$PAGE_URL/tiny_user_project_view.gltf)
         EOF

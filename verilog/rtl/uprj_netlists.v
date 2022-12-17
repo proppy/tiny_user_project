@@ -22,7 +22,9 @@
     `default_nettype wire
     `include "gl/user_project_wrapper.v"
     `include "gl/user_module.v"
+    `include "gl/tiny_user_project.v"
 `else
     `include "user_project_wrapper.v"
     `include "user_module.v"
+    `include "tiny_user_project.v"
 `endif
